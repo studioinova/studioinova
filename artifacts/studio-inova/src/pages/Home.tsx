@@ -153,27 +153,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-      {/* CTA Banner */}
-      <section className="py-20 relative overflow-hidden">
-        <div className="absolute inset-0 bg-foreground -z-20"></div>
-        <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px] -z-10"></div>
-        
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <FadeIn>
-            <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
-              Ready to Build Something Meaningful?
-            </h2>
-            <p className="text-lg text-gray-300 mb-10 max-w-2xl mx-auto">
-              Whether you need a bespoke application or want to leverage our existing AI tools, we're here to help you succeed.
-            </p>
-            <Link href="/contact">
-              <Button size="lg" className="rounded-full px-8 h-14 text-base bg-primary text-white hover:bg-primary/90 border-0 shadow-[0_0_20px_rgba(0,122,255,0.4)] hover:shadow-[0_0_30px_rgba(0,122,255,0.6)] transition-all">
-                Start a Conversation
-              </Button>
-            </Link>
-          </FadeIn>
-        </div>
-      </section>
+
     </div>
   );
 }
