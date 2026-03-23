@@ -65,9 +65,6 @@ export function Footer() {
           <p className="text-sm text-muted-foreground">
             © 2026 Studio Inova. Engineered for Long-term Trust.
           </p>
-          <Link href="/admin" className="text-[11px] text-muted-foreground/50 hover:text-muted-foreground transition-colors">
-            Admin Portal
-          </Link>
         </div>
       </div>
     </footer>
