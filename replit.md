@@ -48,6 +48,22 @@ Every package extends `tsconfig.base.json` which sets `composite: true`. The roo
 - `pnpm run build` — runs `typecheck` first, then recursively runs `build` in all packages that define it
 - `pnpm run typecheck` — runs `tsc --build --emitDeclarationOnly` using project references
 
+## Artifacts
+
+### `artifacts/studio-inova` (`@workspace/studio-inova`)
+
+Studio Inova business website. Multi-page React + Vite app using Tailwind CSS, Framer Motion, and wouter routing.
+
+Pages:
+- `/` — Home: hero, core values, services, CTA
+- `/products` — Products: Detect AI (live), Vesper AI Translator (coming soon), ebook
+- `/about` — About: mission, story, vision, team, values
+- `/contact` — Contact: form (posts to `/api/contact`), social links
+
+Key components: `Navbar`, `Footer`, `FadeIn`, page components.
+Hidden admin link at `/admin` in the footer (small gray text).
+Footer text: "© 2026 Studio Inova. Engineered for Long-term Trust."
+
 ## Packages
 
 ### `artifacts/api-server` (`@workspace/api-server`)

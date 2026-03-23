@@ -1,0 +1,12 @@
+packages:
+  "framer-motion": "For premium smooth scroll and entry animations"
+  "react-hook-form": "For robust contact form state management"
+  "@hookform/resolvers": "For Zod schema validation in forms"
+  "clsx": "For merging class names in UI components"
+  "tailwind-merge": "For merging tailwind classes in UI components"
+
+images: []
+
+notes:
+  - "The API provides a POST /api/contact endpoint. We will use the generated useSubmitContact hook from @workspace/api-client-react."
+  - "Design is light-mode only per requirements. CSS variables are set to force the pure white and Inova Blue theme."
