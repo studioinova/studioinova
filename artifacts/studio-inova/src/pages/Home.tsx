@@ -38,18 +38,16 @@ export default function Home() {
           </FadeIn>
         </div>
       </section>
-
       {/* Description Section */}
       <section className="py-24 bg-white">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <FadeIn direction="up">
-            <p className="text-xl md:text-2xl font-light leading-relaxed text-black">
+            <p className="md:text-2xl font-light text-[16px] text-[#4a5568]">
               Studio Inova is a digital studio focused on building simple apps, AI-powered tools, and clean digital experiences for the future.
             </p>
           </FadeIn>
         </div>
       </section>
-
       {/* Core Values Section */}
       <section className="py-24 bg-secondary">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -97,7 +95,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
       {/* Services Section */}
       <section className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -156,7 +153,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
       {/* CTA Banner */}
       <section className="py-20 relative overflow-hidden">
         <div className="absolute inset-0 bg-foreground -z-20"></div>
