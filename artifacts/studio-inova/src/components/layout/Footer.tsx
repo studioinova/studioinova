@@ -7,22 +7,12 @@ export function Footer() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 lg:gap-8">
           <div className="col-span-1 md:col-span-2 space-y-6">
-            <Link href="/" className="flex items-center gap-2 group inline-flex">
-              <div className="flex items-center justify-center w-8 h-8 rounded-lg bg-primary text-white">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2.5"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  className="w-4 h-4"
-                >
-                  <path d="M12 2v20M17 5l-10 14M7 5l10 14" />
-                  <circle cx="12" cy="12" r="2.5" fill="currentColor" />
-                </svg>
-              </div>
+            <Link href="/" className="flex items-center gap-2">
+              <img
+                src="/logo.png"
+                alt="Studio Inova"
+                className="h-8 w-auto"
+              />
               <span className="font-display font-bold text-lg text-foreground">
                 Studio Inova
               </span>
