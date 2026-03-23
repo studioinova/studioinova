@@ -77,11 +77,6 @@ export function Navbar() {
                 {link.name}
               </Link>
             ))}
-            <Link href="/contact" className="ml-2">
-              <Button className="rounded-full px-6 shadow-md hover:shadow-lg transition-all duration-300">
-                Get Started
-              </Button>
-            </Link>
           </nav>
 
           {/* Mobile Menu Toggle */}
