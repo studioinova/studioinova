@@ -1,5 +1,4 @@
 import { Link } from "wouter";
-import { Twitter, Linkedin, Github } from "lucide-react";
 
 export function Footer() {
   return (
@@ -20,17 +19,6 @@ export function Footer() {
             <p className="text-muted-foreground text-sm max-w-sm leading-relaxed">
               We are a digital studio focused on building simple apps, AI-powered tools, and clean digital experiences for the future.
             </p>
-            <div className="flex items-center gap-4 pt-2">
-              <a href="#" className="w-10 h-10 rounded-full bg-secondary flex items-center justify-center text-muted-foreground hover:bg-primary hover:text-white transition-colors">
-                <Twitter className="w-4 h-4" />
-              </a>
-              <a href="#" className="w-10 h-10 rounded-full bg-secondary flex items-center justify-center text-muted-foreground hover:bg-primary hover:text-white transition-colors">
-                <Linkedin className="w-4 h-4" />
-              </a>
-              <a href="#" className="w-10 h-10 rounded-full bg-secondary flex items-center justify-center text-muted-foreground hover:bg-primary hover:text-white transition-colors">
-                <Github className="w-4 h-4" />
-              </a>
-            </div>
           </div>
           
           <div>
