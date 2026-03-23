@@ -1,52 +1,41 @@
 import { Link } from "wouter";
 import { FadeIn } from "@/components/ui/FadeIn";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Zap, ShieldCheck, CheckCircle2, Smartphone, Cpu, Palette } from "lucide-react";
+import { Zap, ShieldCheck, CheckCircle2, Smartphone, Cpu, Palette } from "lucide-react";
 
 export default function Home() {
   return (
     <div className="flex flex-col min-h-screen">
       {/* Hero Section */}
-      <section className="relative pt-32 pb-20 md:pt-48 md:pb-32 overflow-hidden">
-        {/* Abstract background gradient elements */}
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full max-w-7xl overflow-hidden -z-10 pointer-events-none">
-          <div className="absolute top-[-10%] left-[-5%] w-[40%] h-[50%] rounded-full bg-primary/5 blur-3xl" />
-          <div className="absolute top-[20%] right-[-10%] w-[50%] h-[60%] rounded-full bg-accent/40 blur-3xl" />
-        </div>
-
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <section
+        className="relative w-full min-h-screen flex items-center justify-center"
+        style={{
+          backgroundImage: "url('/hero-bg.jpg')",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
+      >
+        <div className="relative z-10 flex flex-col items-center justify-center text-center px-4">
           <FadeIn direction="up">
-            <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 text-primary text-sm font-semibold mb-6">
-              <span className="relative flex h-2 w-2">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
-                <span className="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
-              </span>
-              Innovating the Future
-            </span>
-          </FadeIn>
-          
-          <FadeIn direction="up" delay={0.1}>
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight text-foreground max-w-4xl mx-auto mb-6 leading-tight">
-              Building Digital Products for <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-blue-400">Long-term Trust</span>
+            <h1 className="text-6xl md:text-7xl lg:text-8xl font-black tracking-widest text-black uppercase mb-4 leading-none">
+              STUDIO INOVA
             </h1>
           </FadeIn>
-          
-          <FadeIn direction="up" delay={0.2}>
-            <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-10 leading-relaxed">
-              Studio Inova is a digital studio focused on building simple apps, AI-powered tools, and clean digital experiences for the future.
+
+          <FadeIn direction="up" delay={0.15}>
+            <p className="text-lg md:text-xl text-black/70 font-light tracking-wide mb-10">
+              Innovation Starts Here
             </p>
           </FadeIn>
-          
-          <FadeIn direction="up" delay={0.3} className="flex flex-col sm:flex-row items-center justify-center gap-4">
+
+          <FadeIn direction="up" delay={0.3}>
             <Link href="/products">
-              <Button size="lg" className="rounded-full px-8 h-14 text-base shadow-lg shadow-primary/25 hover:shadow-xl hover:shadow-primary/30 transition-all group">
-                Explore Our Products
-                <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
-              </Button>
-            </Link>
-            <Link href="/contact">
-              <Button size="lg" variant="outline" className="rounded-full px-8 h-14 text-base border-2 hover:bg-secondary">
-                Partner with us
+              <Button
+                size="lg"
+                variant="outline"
+                className="px-10 h-12 text-sm font-semibold tracking-widest uppercase rounded-none border-2 border-primary text-primary bg-white hover:bg-primary hover:text-white transition-all duration-300"
+              >
+                Discover Our Products
               </Button>
             </Link>
           </FadeIn>
