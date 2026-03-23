@@ -7,14 +7,20 @@ export default function Home() {
   return (
     <div className="flex flex-col min-h-screen">
       {/* Hero Section */}
-      <section
-        className="relative w-full min-h-screen flex items-center justify-center"
-        style={{
-          backgroundImage: "url('/hero-bg.jpg')",
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-        }}
-      >
+      <section className="relative w-full min-h-screen flex items-center justify-center overflow-hidden">
+        {/* Blurred background layer */}
+        <div
+          className="absolute inset-0 z-0"
+          style={{
+            backgroundImage: "url('/hero-bg.jpg')",
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+            filter: "blur(5px)",
+            transform: "scale(1.05)",
+          }}
+        />
+
+        {/* Sharp text content in front */}
         <div className="relative z-10 flex flex-col items-center justify-center text-center px-4">
           <FadeIn direction="up">
             <h1 className="text-6xl md:text-7xl lg:text-8xl font-black tracking-widest text-black uppercase mb-4 leading-none">
@@ -23,21 +29,20 @@ export default function Home() {
           </FadeIn>
 
           <FadeIn direction="up" delay={0.15}>
-            <p className="text-lg md:text-xl text-black/70 font-light tracking-wide mb-10">
+            <p className="text-lg md:text-xl text-black/70 font-light tracking-wide">
               Innovation Starts Here
             </p>
           </FadeIn>
+        </div>
+      </section>
 
-          <FadeIn direction="up" delay={0.3}>
-            <Link href="/products">
-              <Button
-                size="lg"
-                variant="outline"
-                className="px-10 h-12 text-sm font-semibold tracking-widest uppercase rounded-none border-2 border-primary text-primary bg-white hover:bg-primary hover:text-white transition-all duration-300"
-              >
-                Discover Our Products
-              </Button>
-            </Link>
+      {/* Description Section */}
+      <section className="py-24 bg-white">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <FadeIn direction="up">
+            <p className="text-xl md:text-2xl font-light leading-relaxed text-black">
+              Studio Inova is a digital studio focused on building simple apps, AI-powered tools, and clean digital experiences for the future.
+            </p>
           </FadeIn>
         </div>
       </section>
