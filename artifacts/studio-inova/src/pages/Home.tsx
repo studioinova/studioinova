@@ -15,7 +15,7 @@ export default function Home() {
             backgroundImage: "url('/hero-bg.jpg')",
             backgroundSize: "cover",
             backgroundPosition: "center",
-            filter: "blur(5px)",
+            filter: "blur(2px)",
             transform: "scale(1.05)",
           }}
         />
