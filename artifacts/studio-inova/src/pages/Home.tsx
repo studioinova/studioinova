@@ -20,6 +20,9 @@ export default function Home() {
           }}
         />
 
+        {/* White overlay */}
+        <div className="absolute inset-0 z-[1]" style={{ background: "rgba(255, 255, 255, 0.4)" }} />
+
         {/* Sharp text content in front */}
         <div className="relative z-10 flex flex-col items-center justify-center text-center px-4">
           <FadeIn direction="up">
