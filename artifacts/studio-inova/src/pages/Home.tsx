@@ -7,29 +7,29 @@ export default function Home() {
   return (
     <div className="flex flex-col min-h-screen">
       {/* Hero Section */}
-      <section className="relative w-full flex items-center justify-center overflow-hidden" style={{ paddingTop: "120px", paddingBottom: "120px" }}>
+      <section className="relative w-full min-h-screen flex items-center justify-center overflow-hidden">
         {/* Blurred background layer */}
         <div
           className="absolute inset-0 z-0"
           style={{
             backgroundImage: "url('/hero-bg.jpg')",
             backgroundSize: "cover",
-            backgroundPosition: "center 60%",
+            backgroundPosition: "center",
             filter: "blur(2px)",
             transform: "scale(1.05)",
           }}
         />
 
         {/* Sharp text content in front */}
-        <div className="relative z-10 w-full max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center justify-center text-center">
+        <div className="relative z-10 flex flex-col items-center justify-center text-center px-4">
           <FadeIn direction="up">
-            <h1 className="text-6xl md:text-7xl lg:text-8xl font-black tracking-widest text-black uppercase leading-none">
+            <h1 className="text-6xl md:text-7xl lg:text-8xl font-black tracking-widest text-black uppercase mb-4 leading-none">
               STUDIO INOVA
             </h1>
           </FadeIn>
 
           <FadeIn direction="up" delay={0.15}>
-            <p className="text-xl md:text-2xl font-light tracking-wide" style={{ color: "#333333", marginTop: "20px" }}>
+            <p className="text-lg md:text-xl text-black/70 font-light tracking-wide">
               Innovation Starts Here
             </p>
           </FadeIn>
