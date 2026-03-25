@@ -5,11 +5,10 @@ export default function PrivacyPolicy() {
   return (
     <div className="min-h-screen bg-white">
       {/* Header Banner */}
-      <div className="w-full bg-[#007AFF] py-16 px-4 text-center">
+      <div className="w-full bg-[#007AFF] py-16 px-4 text-center pt-[75px] pb-[75px]">
         <h1 className="text-4xl md:text-5xl font-bold text-white mb-3">Privacy Policy</h1>
         <p className="text-blue-100 text-sm">Effective Date: January 1, 2026 &nbsp;·&nbsp; Studio Inova</p>
       </div>
-
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <Link href="/" className="inline-flex items-center gap-2 text-sm text-[#007AFF] hover:underline mb-12">
           <ArrowLeft className="w-4 h-4" />
