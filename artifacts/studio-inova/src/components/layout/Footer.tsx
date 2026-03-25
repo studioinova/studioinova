@@ -33,7 +33,7 @@ export function Footer() {
           <div>
             <h4 className="font-bold text-foreground mb-4 text-center">Legal</h4>
             <div className="flex items-center gap-2">
-              <Link href="/privacy-policy" className="text-sm text-muted-foreground hover:text-primary transition-colors">Privacy Policy</Link>
+              <Link href="/privacy-policy" className="text-sm text-muted-foreground hover:text-primary transition-colors text-center">Privacy Policy</Link>
               <span className="text-muted-foreground/40 select-none">|</span>
               <Link href="/terms-of-service" className="text-sm text-muted-foreground hover:text-primary transition-colors text-center">Terms of Service</Link>
             </div>
