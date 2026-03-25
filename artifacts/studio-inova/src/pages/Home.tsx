@@ -144,87 +144,103 @@ export default function Home() {
       </section>
 
       {/* Our Approach Section */}
-      <section className="py-24 bg-secondary/40">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+      <section className="py-24 bg-[#F8F9FA]">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
 
-            {/* Image Column */}
-            <FadeIn direction="left">
-              <div className="relative">
-                <div className="absolute -inset-3 bg-gradient-to-br from-[#007AFF]/10 to-transparent rounded-[2rem] -z-10" />
-                <img
-                  src="/our-approach.jpg"
-                  alt="Studio Inova workspace — design, code and deploy"
-                  className="w-full rounded-2xl shadow-2xl object-cover aspect-[4/3]"
-                />
-                {/* Floating badge */}
-                <div className="absolute -bottom-5 -right-5 bg-white rounded-xl shadow-lg border border-border/40 px-5 py-3 flex items-center gap-3">
-                  <div className="w-9 h-9 rounded-lg bg-[#007AFF] flex items-center justify-center text-white">
-                    <Rocket className="w-4 h-4" />
-                  </div>
-                  <div>
-                    <p className="text-xs text-gray-400 leading-none mb-0.5">End-to-end</p>
-                    <p className="text-sm font-bold text-black leading-none">From idea to launch</p>
-                  </div>
+          {/* Heading */}
+          <FadeIn className="text-center mb-14">
+            <p className="text-sm font-semibold text-[#007AFF] uppercase tracking-widest mb-3">How We Work</p>
+            <h2 className="text-3xl md:text-4xl font-bold text-[#0D1F3C] mb-4">Our Approach</h2>
+            <p className="text-[#4A5568] max-w-2xl mx-auto">
+              Every Studio Inova product follows the same disciplined four-step process — ensuring what we ship is polished, purposeful, and built to last.
+            </p>
+          </FadeIn>
+
+          {/* Image Banner */}
+          <FadeIn>
+            <div className="relative mb-14 rounded-2xl overflow-hidden shadow-xl">
+              <img
+                src="/our-approach.jpg"
+                alt="Studio Inova workspace"
+                className="w-full object-cover h-56 md:h-72"
+              />
+              <div className="absolute inset-0 bg-gradient-to-r from-[#0D1F3C]/60 via-transparent to-transparent flex items-center px-10">
+                <div>
+                  <p className="text-white/80 text-sm font-medium uppercase tracking-widest mb-1">Studio Inova</p>
+                  <p className="text-white text-2xl md:text-3xl font-bold leading-snug">From idea to launch —<br/>every step, engineered.</p>
                 </div>
               </div>
-            </FadeIn>
-
-            {/* Steps Column */}
-            <FadeIn direction="right">
-              <p className="text-sm font-semibold text-[#007AFF] uppercase tracking-widest mb-3">How We Work</p>
-              <h2 className="text-3xl md:text-4xl font-bold text-[#0D1F3C] mb-4">Our Approach</h2>
-              <p className="text-[#4A5568] mb-10">
-                Every Studio Inova product follows the same disciplined four-step process — ensuring what we ship is polished, purposeful, and built to last.
-              </p>
-
-              <div className="space-y-6">
-                {[
-                  {
-                    step: "01",
-                    icon: Search,
-                    title: "Discovery",
-                    desc: "We listen deeply to understand your vision, goals, and target audience before writing a single line of code.",
-                  },
-                  {
-                    step: "02",
-                    icon: Paintbrush,
-                    title: "Design",
-                    desc: "We craft clean, intuitive interfaces that feel effortless — every pixel aligned with your brand identity and user needs.",
-                  },
-                  {
-                    step: "03",
-                    icon: Code2,
-                    title: "Development",
-                    desc: "We build robust, scalable solutions using modern, proven technologies — stable, secure, and fast.",
-                  },
-                  {
-                    step: "04",
-                    icon: Rocket,
-                    title: "Deployment",
-                    desc: "We launch with precision and stay involved — monitoring, maintaining, and iterating so your product keeps improving.",
-                  },
-                ].map(({ step, icon: Icon, title, desc }) => (
-                  <div
-                    key={step}
-                    className="inova-card flex items-start gap-5 p-5 border border-border/30"
-                  >
-                    <div className="flex-shrink-0 w-10 h-10 rounded-xl bg-[#007AFF]/10 text-[#007AFF] flex items-center justify-center">
-                      <Icon className="w-5 h-5" />
-                    </div>
-                    <div className="flex-1 min-w-0">
-                      <div className="flex items-center gap-2 mb-1">
-                        <span className="text-xs font-bold text-[#007AFF] tracking-widest">{step}</span>
-                        <h3 className="text-base font-bold text-[#0D1F3C]">{title}</h3>
-                      </div>
-                      <p className="text-sm text-[#4A5568]">{desc}</p>
-                    </div>
-                  </div>
-                ))}
+              {/* Floating badge */}
+              <div className="absolute bottom-4 right-4 bg-white rounded-xl shadow-lg px-4 py-2.5 flex items-center gap-2.5">
+                <div className="w-8 h-8 rounded-lg bg-[#007AFF] flex items-center justify-center text-white">
+                  <Rocket className="w-4 h-4" />
+                </div>
+                <span className="text-sm font-bold text-[#0D1F3C]">End-to-end delivery</span>
               </div>
-            </FadeIn>
+            </div>
+          </FadeIn>
 
+          {/* 2×2 Step Cards */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {[
+              {
+                step: "01",
+                icon: Search,
+                title: "Discovery",
+                desc: "We listen deeply to understand your vision, goals, and target audience before writing a single line of code.",
+              },
+              {
+                step: "02",
+                icon: Paintbrush,
+                title: "Design",
+                desc: "We craft clean, intuitive interfaces — every pixel aligned with your brand identity and user needs.",
+              },
+              {
+                step: "03",
+                icon: Code2,
+                title: "Development",
+                desc: "We build robust, scalable solutions using modern technologies — stable, secure, and fast.",
+              },
+              {
+                step: "04",
+                icon: Rocket,
+                title: "Deployment",
+                desc: "We launch with precision and stay involved — monitoring, iterating so your product keeps improving.",
+              },
+            ].map(({ step, icon: Icon, title, desc }, i) => (
+              <FadeIn key={step} delay={i * 0.1}>
+                <div
+                  className="bg-white rounded-2xl p-7 h-full flex flex-col gap-5 border border-white/80"
+                  style={{
+                    boxShadow: "0 10px 30px rgba(0,0,0,0.03)",
+                    borderRadius: "16px",
+                    transition: "all 0.3s ease",
+                  }}
+                  onMouseEnter={e => {
+                    (e.currentTarget as HTMLDivElement).style.transform = "translateY(-6px)";
+                    (e.currentTarget as HTMLDivElement).style.boxShadow = "0 20px 40px rgba(0,122,255,0.08)";
+                  }}
+                  onMouseLeave={e => {
+                    (e.currentTarget as HTMLDivElement).style.transform = "translateY(0)";
+                    (e.currentTarget as HTMLDivElement).style.boxShadow = "0 10px 30px rgba(0,0,0,0.03)";
+                  }}
+                >
+                  {/* Icon */}
+                  <div className="w-14 h-14 rounded-2xl bg-[#007AFF]/10 flex items-center justify-center text-[#007AFF]">
+                    <Icon className="w-7 h-7" strokeWidth={1.75} />
+                  </div>
+                  {/* Step + Title */}
+                  <div>
+                    <span className="text-xs font-bold text-[#007AFF] tracking-widest">{step}</span>
+                    <h3 className="text-lg font-bold text-[#0D1F3C] mt-0.5">{title}</h3>
+                  </div>
+                  {/* Description */}
+                  <p className="text-sm text-[#718096] leading-relaxed">{desc}</p>
+                </div>
+              </FadeIn>
+            ))}
           </div>
+
         </div>
       </section>
 
