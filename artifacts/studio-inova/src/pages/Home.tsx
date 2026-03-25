@@ -1,7 +1,7 @@
 import { Link } from "wouter";
 import { FadeIn } from "@/components/ui/FadeIn";
 import { Button } from "@/components/ui/button";
-import { Zap, ShieldCheck, CheckCircle2, Smartphone, Cpu, Palette } from "lucide-react";
+import { Zap, ShieldCheck, CheckCircle2, Smartphone, Cpu, Palette, Search, Paintbrush, Code2, Rocket } from "lucide-react";
 
 export default function Home() {
   return (
@@ -150,6 +150,91 @@ export default function Home() {
                 </div>
               </div>
             </FadeIn>
+          </div>
+        </div>
+      </section>
+
+      {/* Our Approach Section */}
+      <section className="py-24 bg-secondary/40">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+
+            {/* Image Column */}
+            <FadeIn direction="left">
+              <div className="relative">
+                <div className="absolute -inset-3 bg-gradient-to-br from-[#007AFF]/10 to-transparent rounded-[2rem] -z-10" />
+                <img
+                  src="/our-approach.jpg"
+                  alt="Studio Inova workspace — design, code and deploy"
+                  className="w-full rounded-2xl shadow-2xl object-cover aspect-[4/3]"
+                />
+                {/* Floating badge */}
+                <div className="absolute -bottom-5 -right-5 bg-white rounded-xl shadow-lg border border-border/40 px-5 py-3 flex items-center gap-3">
+                  <div className="w-9 h-9 rounded-lg bg-[#007AFF] flex items-center justify-center text-white">
+                    <Rocket className="w-4 h-4" />
+                  </div>
+                  <div>
+                    <p className="text-xs text-gray-400 leading-none mb-0.5">End-to-end</p>
+                    <p className="text-sm font-bold text-black leading-none">From idea to launch</p>
+                  </div>
+                </div>
+              </div>
+            </FadeIn>
+
+            {/* Steps Column */}
+            <FadeIn direction="right">
+              <p className="text-sm font-semibold text-[#007AFF] uppercase tracking-widest mb-3">How We Work</p>
+              <h2 className="text-3xl md:text-4xl font-bold text-[#0D1F3C] mb-4">Our Approach</h2>
+              <p className="text-[#4A5568] mb-10">
+                Every Studio Inova product follows the same disciplined four-step process — ensuring what we ship is polished, purposeful, and built to last.
+              </p>
+
+              <div className="space-y-6">
+                {[
+                  {
+                    step: "01",
+                    icon: Search,
+                    title: "Discovery",
+                    desc: "We listen deeply to understand your vision, goals, and target audience before writing a single line of code.",
+                  },
+                  {
+                    step: "02",
+                    icon: Paintbrush,
+                    title: "Design",
+                    desc: "We craft clean, intuitive interfaces that feel effortless — every pixel aligned with your brand identity and user needs.",
+                  },
+                  {
+                    step: "03",
+                    icon: Code2,
+                    title: "Development",
+                    desc: "We build robust, scalable solutions using modern, proven technologies — stable, secure, and fast.",
+                  },
+                  {
+                    step: "04",
+                    icon: Rocket,
+                    title: "Deployment",
+                    desc: "We launch with precision and stay involved — monitoring, maintaining, and iterating so your product keeps improving.",
+                  },
+                ].map(({ step, icon: Icon, title, desc }) => (
+                  <div
+                    key={step}
+                    className="inova-card flex items-start gap-5 p-5 border border-border/30"
+                  >
+                    <div className="flex-shrink-0 w-10 h-10 rounded-xl bg-[#007AFF]/10 text-[#007AFF] flex items-center justify-center">
+                      <Icon className="w-5 h-5" />
+                    </div>
+                    <div className="flex-1 min-w-0">
+                      <div className="flex items-center gap-2 mb-1">
+                        <span className="text-xs font-bold text-[#007AFF] tracking-widest">{step}</span>
+                        <h3 className="text-base font-bold text-[#0D1F3C]">{title}</h3>
+                      </div>
+                      <p className="text-sm text-[#4A5568]">{desc}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </FadeIn>
+
           </div>
         </div>
       </section>
