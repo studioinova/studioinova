@@ -152,7 +152,7 @@ export default function Home() {
             <p className="text-sm font-semibold text-[#007AFF] uppercase tracking-widest mb-3">How We Work</p>
             <h2 className="text-3xl md:text-4xl font-bold text-[#0D1F3C] mb-4">Our Approach</h2>
             <p className="text-[#4A5568] max-w-2xl mx-auto">
-              Every Studio Inova product follows the same disciplined four-step process — ensuring what we ship is polished, purposeful, and built to last.
+              How we build our products at Studio Inova.
             </p>
           </FadeIn>
 
@@ -186,26 +186,26 @@ export default function Home() {
               {
                 step: "01",
                 icon: Search,
-                title: "Discovery",
-                desc: "We listen deeply to understand your vision, goals, and target audience before writing a single line of code.",
+                title: "Research & Ideas",
+                desc: "We start by identifying real problems worth solving — studying user needs, market gaps, and emerging technology to shape product concepts.",
               },
               {
                 step: "02",
                 icon: Paintbrush,
-                title: "Design",
-                desc: "We craft clean, intuitive interfaces — every pixel aligned with your brand identity and user needs.",
+                title: "Minimalist Design",
+                desc: "We design clean, distraction-free interfaces that put the user first — stripping away everything unnecessary until only clarity remains.",
               },
               {
                 step: "03",
                 icon: Code2,
-                title: "Development",
-                desc: "We build robust, scalable solutions using modern technologies — stable, secure, and fast.",
+                title: "AI Integration",
+                desc: "We embed AI capabilities thoughtfully into each product — making smart automation feel natural, useful, and trustworthy.",
               },
               {
                 step: "04",
                 icon: Rocket,
-                title: "Deployment",
-                desc: "We launch with precision and stay involved — monitoring, iterating so your product keeps improving.",
+                title: "Continuous Improvement",
+                desc: "We treat launch as the beginning — gathering feedback, refining features, and iterating until every product earns lasting trust.",
               },
             ].map(({ step, icon: Icon, title, desc }, i) => (
               <FadeIn key={step} delay={i * 0.1}>
