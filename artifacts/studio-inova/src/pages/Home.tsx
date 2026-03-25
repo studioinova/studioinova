@@ -97,56 +97,45 @@ export default function Home() {
       </section>
       {/* Services Section */}
       <section className="py-24 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            <FadeIn direction="left">
-              <h2 className="text-3xl md:text-4xl font-bold mb-6">What We Do</h2>
-              <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
-                Studio Inova operates at the intersection of modern design and advanced technology. We build solutions that feel effortless to the user while performing complex tasks under the hood.
-              </p>
-              <ul className="space-y-6">
-                <li className="flex gap-4">
-                  <div className="mt-1 w-10 h-10 rounded-lg bg-secondary flex-shrink-0 flex items-center justify-center text-primary">
-                    <Smartphone className="w-5 h-5" />
-                  </div>
-                  <div>
-                    <h4 className="text-lg font-bold">App Development</h4>
-                    <p className="text-muted-foreground">Modern, responsive web and mobile applications built on robust, scalable architectures.</p>
-                  </div>
-                </li>
-                <li className="flex gap-4">
-                  <div className="mt-1 w-10 h-10 rounded-lg bg-secondary flex-shrink-0 flex items-center justify-center text-primary">
-                    <Cpu className="w-5 h-5" />
-                  </div>
-                  <div>
-                    <h4 className="text-lg font-bold">AI-Based Tools</h4>
-                    <p className="text-muted-foreground">Intelligent utilities leveraging machine learning to automate and simplify complex workflows.</p>
-                  </div>
-                </li>
-                <li className="flex gap-4">
-                  <div className="mt-1 w-10 h-10 rounded-lg bg-secondary flex-shrink-0 flex items-center justify-center text-primary">
-                    <Palette className="w-5 h-5" />
-                  </div>
-                  <div>
-                    <h4 className="text-lg font-bold">Digital Branding</h4>
-                    <p className="text-muted-foreground">Cohesive identity design that establishes trust and authority in competitive markets.</p>
-                  </div>
-                </li>
-              </ul>
-            </FadeIn>
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <FadeIn className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">What We Do</h2>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              Studio Inova operates at the intersection of modern design and advanced technology. We build solutions that feel effortless to the user while performing complex tasks under the hood.
+            </p>
+          </FadeIn>
 
-            <FadeIn direction="right" className="relative">
-              <div className="absolute -inset-4 bg-gradient-to-tr from-primary/5 to-accent/50 rounded-[2rem] -z-10 transform rotate-3"></div>
-              <div className="inova-card border border-border/40 p-8 shadow-xl relative overflow-hidden">
-                <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-primary to-blue-300"></div>
-                <h3 className="text-2xl font-bold mb-4">Our Approach</h3>
-                <p className="text-muted-foreground leading-relaxed mb-6">
-                  We believe in clarity, privacy, and long-term value over short-term trends. Every product we launch goes through rigorous refinement to ensure it meets our standard of excellence.
-                </p>
-                <div className="p-6 bg-secondary rounded-xl border border-border/50">
-                  <p className="text-sm font-medium italic text-foreground border-l-2 border-primary pl-4">
-                    "We don't just build features; we build trust through consistent, reliable performance."
-                  </p>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <FadeIn delay={0.1}>
+              <div className="inova-card p-7 border border-border/30 flex flex-col gap-4">
+                <div className="w-11 h-11 rounded-xl bg-primary/10 flex items-center justify-center text-primary">
+                  <Smartphone className="w-5 h-5" />
+                </div>
+                <div>
+                  <h4 className="text-lg font-bold mb-2">App Development</h4>
+                  <p className="text-muted-foreground text-sm">Modern, responsive web and mobile applications built on robust, scalable architectures.</p>
+                </div>
+              </div>
+            </FadeIn>
+            <FadeIn delay={0.2}>
+              <div className="inova-card p-7 border border-border/30 flex flex-col gap-4">
+                <div className="w-11 h-11 rounded-xl bg-primary/10 flex items-center justify-center text-primary">
+                  <Cpu className="w-5 h-5" />
+                </div>
+                <div>
+                  <h4 className="text-lg font-bold mb-2">AI-Based Tools</h4>
+                  <p className="text-muted-foreground text-sm">Intelligent utilities leveraging machine learning to automate and simplify complex workflows.</p>
+                </div>
+              </div>
+            </FadeIn>
+            <FadeIn delay={0.3}>
+              <div className="inova-card p-7 border border-border/30 flex flex-col gap-4">
+                <div className="w-11 h-11 rounded-xl bg-primary/10 flex items-center justify-center text-primary">
+                  <Palette className="w-5 h-5" />
+                </div>
+                <div>
+                  <h4 className="text-lg font-bold mb-2">Digital Branding</h4>
+                  <p className="text-muted-foreground text-sm">Cohesive identity design that establishes trust and authority in competitive markets.</p>
                 </div>
               </div>
             </FadeIn>
