@@ -59,7 +59,7 @@ export default function About() {
               { icon: Shield, title: "Trusted", desc: "Trust is earned in drops and lost in buckets. We prioritize transparency, robust security, and absolute data privacy." }
             ].map((value, i) => (
               <FadeIn key={value.title} delay={i * 0.1}>
-                <Card className="h-full border-none shadow-sm hover:shadow-md transition-shadow bg-white">
+                <Card className="inova-card h-full border-none">
                   <CardContent className="p-8">
                     <div className="w-12 h-12 rounded-xl bg-primary/5 text-primary flex items-center justify-center mb-6">
                       <value.icon className="w-6 h-6" />
@@ -79,7 +79,7 @@ export default function About() {
         <FadeIn>
           <h2 className="text-3xl font-bold mb-12">Leadership</h2>
           <div className="inline-block text-left">
-            <div className="bg-white p-6 rounded-2xl border border-border shadow-sm flex items-center gap-6 max-w-md w-full hover:shadow-md transition-all">
+            <div className="inova-card p-6 border border-border/40 flex items-center gap-6 max-w-md w-full">
               <div className="w-20 h-20 rounded-full bg-secondary flex items-center justify-center text-muted-foreground shrink-0 border-2 border-primary/20">
                 <User className="w-8 h-8" />
               </div>

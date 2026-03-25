@@ -58,36 +58,36 @@ export default function Home() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <FadeIn delay={0.1}>
-              <div className="bg-white rounded-2xl p-8 shadow-sm border border-border/50 hover:shadow-md transition-all h-full">
+              <div className="inova-card p-8 border border-border/40 h-full">
                 <div className="w-12 h-12 rounded-xl bg-primary/10 text-primary flex items-center justify-center mb-6">
                   <CheckCircle2 className="w-6 h-6" />
                 </div>
                 <h3 className="text-xl font-bold mb-3">Simple</h3>
-                <p className="text-muted-foreground leading-relaxed">
+                <p className="text-muted-foreground">
                   We strip away the unnecessary. Our tools are designed with clean, intuitive interfaces that anyone can pick up and use immediately.
                 </p>
               </div>
             </FadeIn>
             
             <FadeIn delay={0.2}>
-              <div className="bg-white rounded-2xl p-8 shadow-sm border border-border/50 hover:shadow-md transition-all h-full">
+              <div className="inova-card p-8 border border-border/40 h-full">
                 <div className="w-12 h-12 rounded-xl bg-primary/10 text-primary flex items-center justify-center mb-6">
                   <Zap className="w-6 h-6" />
                 </div>
                 <h3 className="text-xl font-bold mb-3">Effective</h3>
-                <p className="text-muted-foreground leading-relaxed">
+                <p className="text-muted-foreground">
                   Functionality is our baseline. We solve real problems with calculated steps, ensuring every feature provides tangible value.
                 </p>
               </div>
             </FadeIn>
 
             <FadeIn delay={0.3}>
-              <div className="bg-white rounded-2xl p-8 shadow-sm border border-border/50 hover:shadow-md transition-all h-full">
+              <div className="inova-card p-8 border border-border/40 h-full">
                 <div className="w-12 h-12 rounded-xl bg-primary/10 text-primary flex items-center justify-center mb-6">
                   <ShieldCheck className="w-6 h-6" />
                 </div>
                 <h3 className="text-xl font-bold mb-3">Trusted</h3>
-                <p className="text-muted-foreground leading-relaxed">
+                <p className="text-muted-foreground">
                   Engineered for long-term trust. We prioritize your privacy and data security above all, building platforms you can rely on for years.
                 </p>
               </div>
@@ -137,7 +137,7 @@ export default function Home() {
 
             <FadeIn direction="right" className="relative">
               <div className="absolute -inset-4 bg-gradient-to-tr from-primary/5 to-accent/50 rounded-[2rem] -z-10 transform rotate-3"></div>
-              <div className="bg-card rounded-2xl border border-border p-8 shadow-xl relative overflow-hidden">
+              <div className="inova-card border border-border/40 p-8 shadow-xl relative overflow-hidden">
                 <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-primary to-blue-300"></div>
                 <h3 className="text-2xl font-bold mb-4">Our Approach</h3>
                 <p className="text-muted-foreground leading-relaxed mb-6">

@@ -213,6 +213,11 @@
   h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-display);
     @apply tracking-tight;
+    font-weight: 700;
+  }
+
+  p {
+    line-height: 1.6;
   }
 }
 
@@ -225,6 +230,29 @@
     content: attr(data-placeholder);
     color: hsl(var(--muted-foreground));
     pointer-events: none;
+  }
+
+  /* Inova card: white, subtle shadow, 12px radius, lift on hover */
+  .inova-card {
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+  }
+
+  .inova-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 16px 32px rgba(0, 122, 255, 0.08), 0 4px 8px rgba(0, 0, 0, 0.06);
+  }
+
+  /* Lift effect for standalone buttons */
+  .btn-lift {
+    transition: all 0.3s ease;
+  }
+
+  .btn-lift:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 122, 255, 0.25);
   }
 
   .no-default-hover-elevate {}

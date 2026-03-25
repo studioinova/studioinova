@@ -18,7 +18,7 @@ export default function Products() {
         <div className="flex flex-col gap-16">
           {/* Featured Product: Detect AI */}
           <FadeIn>
-            <div className="bg-white rounded-3xl overflow-hidden border border-border shadow-lg flex flex-col lg:flex-row group">
+            <div className="inova-card overflow-hidden border border-border/40 flex flex-col lg:flex-row group">
               <div className="p-8 md:p-12 lg:w-1/2 flex flex-col justify-center">
                 <Badge className="w-fit mb-6 bg-emerald-100 text-emerald-800 hover:bg-emerald-100 border-emerald-200">
                   <span className="w-2 h-2 rounded-full bg-emerald-500 mr-2 animate-pulse"></span>
@@ -85,7 +85,7 @@ export default function Products() {
 
           {/* Coming Soon: Vesper AI */}
           <FadeIn delay={0.1}>
-            <div className="bg-white rounded-3xl overflow-hidden border border-border shadow-md flex flex-col lg:flex-row-reverse group">
+            <div className="inova-card overflow-hidden border border-border/40 flex flex-col lg:flex-row-reverse group">
               <div className="p-8 md:p-12 lg:w-1/2 flex flex-col justify-center">
                 <Badge className="w-fit mb-6 bg-amber-100 text-amber-800 hover:bg-amber-100 border-amber-200">
                   Coming Soon
