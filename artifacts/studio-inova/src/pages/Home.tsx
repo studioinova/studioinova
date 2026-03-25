@@ -26,7 +26,7 @@ export default function Home() {
         {/* Sharp text content in front */}
         <div className="relative z-10 flex flex-col items-center justify-center text-center px-4">
           <FadeIn direction="up">
-            <h1 className="text-6xl md:text-7xl lg:text-8xl font-black tracking-widest text-black uppercase mb-4 leading-none">
+            <h1 className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-black tracking-widest text-black uppercase mb-4 leading-none">
               STUDIO INOVA
             </h1>
           </FadeIn>

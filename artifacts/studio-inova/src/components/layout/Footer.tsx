@@ -32,15 +32,16 @@ export function Footer() {
           
           <div>
             <h4 className="font-bold text-foreground mb-4">Legal</h4>
-            <ul className="space-y-3">
-              <li><Link href="/privacy-policy" className="text-sm text-muted-foreground hover:text-primary transition-colors">Privacy Policy</Link></li>
-              <li><Link href="/terms-of-service" className="text-sm text-muted-foreground hover:text-primary transition-colors">Terms of Service</Link></li>
-            </ul>
+            <div className="flex items-center gap-2">
+              <Link href="/privacy-policy" className="text-sm text-muted-foreground hover:text-primary transition-colors">Privacy Policy</Link>
+              <span className="text-muted-foreground/40 select-none">|</span>
+              <Link href="/terms-of-service" className="text-sm text-muted-foreground hover:text-primary transition-colors">Terms of Service</Link>
+            </div>
           </div>
         </div>
         
         <div className="mt-16 pt-8 border-t border-border flex flex-col sm:flex-row justify-between items-center gap-4">
-          <p className="text-sm text-muted-foreground">© 2026 Studio Inova.Innovation Starts Here. </p>
+          <p className="text-sm text-muted-foreground">© 2026 Studio Inova. Engineered for Long-term Trust.</p>
         </div>
       </div>
     </footer>
