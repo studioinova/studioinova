@@ -170,13 +170,6 @@ export default function Home() {
                   <p className="text-white text-2xl md:text-3xl font-bold leading-snug">From idea to launch —<br/>every step, engineered.</p>
                 </div>
               </div>
-              {/* Floating badge */}
-              <div className="absolute bottom-4 right-4 bg-white rounded-xl shadow-lg px-4 py-2.5 flex items-center gap-2.5">
-                <div className="w-8 h-8 rounded-lg bg-[#007AFF] flex items-center justify-center text-white">
-                  <Rocket className="w-4 h-4" />
-                </div>
-                <span className="text-sm font-bold text-[#0D1F3C]">End-to-end delivery</span>
-              </div>
             </div>
           </FadeIn>
 
