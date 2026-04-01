@@ -1,7 +1,7 @@
 import { Link } from "wouter";
 import { FadeIn } from "@/components/ui/FadeIn";
 import { Button } from "@/components/ui/button";
-import { Zap, ShieldCheck, CheckCircle2, Smartphone, Cpu, Palette, Search, Paintbrush, Code2, Rocket } from "lucide-react";
+import { Zap, ShieldCheck, CheckCircle2, Smartphone, Cpu, Palette, Search, Paintbrush, Code2, Rocket, GraduationCap } from "lucide-react";
 
 export default function Home() {
   return (
@@ -137,6 +137,50 @@ export default function Home() {
               </div>
             </FadeIn>
           </div>
+        </div>
+      </section>
+
+      {/* Academy Section */}
+      <section className="py-20 bg-[#F8F9FA]">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <FadeIn className="text-center mb-12">
+            <p className="text-sm font-semibold text-[#007AFF] uppercase tracking-widest mb-3">Education</p>
+            <h2 className="text-3xl md:text-4xl font-bold text-[#0D1F3C] mb-4">Academy</h2>
+          </FadeIn>
+          <FadeIn delay={0.1}>
+            <div
+              className="bg-white flex flex-col sm:flex-row items-start gap-7 p-8 sm:p-10 cursor-default"
+              style={{
+                borderRadius: "20px",
+                boxShadow: "0 8px 32px rgba(0, 122, 255, 0.07), 0 2px 8px rgba(0,0,0,0.04)",
+                transition: "transform 0.3s ease, box-shadow 0.3s ease",
+              }}
+              onMouseEnter={e => {
+                (e.currentTarget as HTMLDivElement).style.transform = "translateY(-5px)";
+                (e.currentTarget as HTMLDivElement).style.boxShadow = "0 16px 48px rgba(0, 122, 255, 0.13), 0 4px 16px rgba(0,0,0,0.06)";
+              }}
+              onMouseLeave={e => {
+                (e.currentTarget as HTMLDivElement).style.transform = "translateY(0)";
+                (e.currentTarget as HTMLDivElement).style.boxShadow = "0 8px 32px rgba(0, 122, 255, 0.07), 0 2px 8px rgba(0,0,0,0.04)";
+              }}
+            >
+              <div
+                className="flex-shrink-0 w-16 h-16 rounded-2xl flex items-center justify-center"
+                style={{
+                  background: "rgba(0, 122, 255, 0.10)",
+                  boxShadow: "0 0 0 8px rgba(0, 122, 255, 0.06)",
+                }}
+              >
+                <GraduationCap className="w-8 h-8" style={{ color: "#007AFF" }} strokeWidth={1.75} />
+              </div>
+              <div className="flex flex-col gap-3">
+                <h4 className="text-xl font-bold" style={{ color: "#007AFF" }}>Academy</h4>
+                <p className="text-[#4A5568] text-sm leading-relaxed max-w-2xl">
+                  We offer an educational ebook designed to empower beginners with AI knowledge. It teaches you how to master AI tools and build products with confidence, moving from zero technical background to a creator mindset.
+                </p>
+              </div>
+            </div>
+          </FadeIn>
         </div>
       </section>
 
