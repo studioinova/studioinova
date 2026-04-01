@@ -41,7 +41,7 @@ export function Footer() {
         </div>
         
         <div className="mt-16 pt-8 border-t border-border flex flex-col sm:flex-row justify-between items-center gap-4">
-          <p className="text-sm text-muted-foreground">© 2026 Studio Inova. Innovation Starts Here.</p>
+          <p className="text-sm text-muted-foreground">© 2026 Studio Inova.</p>
         </div>
       </div>
     </footer>
