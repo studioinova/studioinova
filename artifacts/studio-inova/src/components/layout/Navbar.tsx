@@ -30,9 +30,7 @@ export function Navbar() {
 
   return (
     <header
-      className={`fixed top-0 inset-x-0 z-50 transition-all duration-300 bg-white/90 backdrop-blur-md ${
-        isScrolled ? "shadow-sm border-b border-border/50 py-3" : "py-5"
-      }`}
+      className="fixed top-0 inset-x-0 z-50 transition-all duration-300 bg-white/90 backdrop-blur-md py-5 pt-[15px] pb-[15px]"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center">
@@ -73,7 +71,6 @@ export function Navbar() {
           </button>
         </div>
       </div>
-
       {/* Mobile Nav */}
       {mobileMenuOpen && (
         <div className="md:hidden absolute top-full left-0 w-full bg-white border-b border-border shadow-lg py-4 px-4 flex flex-col gap-4 animate-in slide-in-from-top-2">
