@@ -102,37 +102,37 @@ export default function Home() {
             </p>
           </FadeIn>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <FadeIn delay={0.1}>
-              <div className="inova-card p-7 border border-border/30 flex flex-col gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-stretch">
+            <FadeIn delay={0.1} className="h-full">
+              <div className="inova-card p-7 border border-border/30 flex flex-col gap-4 h-full">
                 <div className="w-11 h-11 rounded-xl bg-primary/10 flex items-center justify-center text-primary">
                   <Smartphone className="w-5 h-5" />
                 </div>
                 <div>
                   <h4 className="text-lg font-bold mb-2">App Development</h4>
-                  <p className="text-muted-foreground text-sm">Modern, responsive web and mobile applications built on robust, scalable architectures.</p>
+                  <p className="text-[#4A5568] text-sm">Developing user-centric mobile and web applications with a focus on simplicity and modern aesthetics.</p>
                 </div>
               </div>
             </FadeIn>
-            <FadeIn delay={0.2}>
-              <div className="inova-card p-7 border border-border/30 flex flex-col gap-4">
+            <FadeIn delay={0.2} className="h-full">
+              <div className="inova-card p-7 border border-border/30 flex flex-col gap-4 h-full">
                 <div className="w-11 h-11 rounded-xl bg-primary/10 flex items-center justify-center text-primary">
                   <Cpu className="w-5 h-5" />
                 </div>
                 <div>
                   <h4 className="text-lg font-bold mb-2">AI-Based Tools</h4>
-                  <p className="text-muted-foreground text-sm">Intelligent utilities leveraging machine learning to automate and simplify complex workflows.</p>
+                  <p className="text-[#4A5568] text-sm">Intelligent AI detection and analysis tools like Detect AI, built to ensure authenticity in the digital age.</p>
                 </div>
               </div>
             </FadeIn>
-            <FadeIn delay={0.3}>
-              <div className="inova-card p-7 border border-border/30 flex flex-col gap-4">
+            <FadeIn delay={0.3} className="h-full">
+              <div className="inova-card p-7 border border-border/30 flex flex-col gap-4 h-full">
                 <div className="w-11 h-11 rounded-xl bg-primary/10 flex items-center justify-center text-primary">
                   <GraduationCap className="w-5 h-5" />
                 </div>
                 <div>
                   <h4 className="text-lg font-bold mb-2">Academy</h4>
-                  <p className="text-muted-foreground text-sm">We offer an educational ebook designed to empower beginners with AI knowledge. It teaches you how to master AI tools and build products with confidence, moving from zero technical background to a creator mindset.</p>
+                  <p className="text-[#4A5568] text-sm">We offer an educational ebook designed to empower beginners with AI knowledge. It teaches you how to master AI tools and build products with confidence, moving from zero technical background to a creator mindset.</p>
                 </div>
               </div>
             </FadeIn>
