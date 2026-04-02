@@ -28,34 +28,39 @@ export default function Products() {
                   <span className="w-2 h-2 rounded-full bg-emerald-500 mr-2 animate-pulse"></span>
                   Live & Available
                 </Badge>
-                
+
                 <div className="flex items-center gap-4 mb-4">
-                  <div className="w-12 h-12 rounded-xl bg-primary flex items-center justify-center text-white shadow-md">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="w-6 h-6">
-                      <path d="M12 2v20M17 5l-10 14M7 5l10 14" />
-                    </svg>
-                  </div>
-                  <h2 className="text-3xl font-bold">Detect AI</h2>
+                  <img
+                    src="/detect-ai-logo.jpg"
+                    alt="Detect AI"
+                    className="w-12 h-12 rounded-xl object-cover shadow-md"
+                  />
+                  <h2 className="text-3xl font-bold">Detect AI — Detect what's real or fake</h2>
                 </div>
-                
+
                 <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
-                  The most advanced AI-powered tool to identify AI-generated text and images in seconds. Built for students, teachers, and creators to ensure authenticity in the digital age.
+                  The industry-leading tool to detect AI-generated content. Accurately identify AI-written text, AI-generated images, and videos with our deep scanning technology.
                 </p>
 
                 <ul className="space-y-3 mb-8">
-                  {["Multi-step Deep Scanning", "Real-time Text Analysis", "Detailed Scan History", "99.8% Accuracy Rate"].map((feature, i) => (
+                  {[
+                    "AI Text Detection: Analyze articles, essays, and reports.",
+                    "Image & Video Scan: Identify deepfakes and AI-generated visuals.",
+                    "High Accuracy: Powered by advanced neural networks for 99%+ precision.",
+                    "Simple Interface: Minimalist and easy-to-use UI for everyone.",
+                  ].map((feature, i) => (
                     <li key={i} className="flex items-center text-foreground font-medium">
-                      <div className="mr-3 w-5 h-5 rounded-full bg-primary/10 flex items-center justify-center text-primary">
-                        <Check className="w-3 h-3" />
+                      <div className="mr-3 w-5 h-5 flex-shrink-0 rounded-full flex items-center justify-center" style={{ background: "rgba(0,122,255,0.12)" }}>
+                        <Check className="w-3 h-3" style={{ color: "#007AFF" }} />
                       </div>
                       {feature}
                     </li>
                   ))}
                 </ul>
 
-                <Button className="w-fit rounded-full px-8" asChild>
-                  <a href="https://detectai.com" target="_blank" rel="noopener noreferrer">
-                    Visit Detect AI <ExternalLink className="ml-2 w-4 h-4" />
+                <Button className="w-fit rounded-full px-8" style={{ background: "#007AFF" }} asChild>
+                  <a href="https://detect-ai-official.lovable.app/" target="_blank" rel="noopener noreferrer">
+                    Open Detect AI <ExternalLink className="ml-2 w-4 h-4" />
                   </a>
                 </Button>
               </div>
@@ -69,18 +74,23 @@ export default function Products() {
                     <div className="w-3 h-3 rounded-full bg-red-400"></div>
                     <div className="w-3 h-3 rounded-full bg-amber-400"></div>
                     <div className="w-3 h-3 rounded-full bg-emerald-400"></div>
-                    <div className="mx-auto w-1/2 h-5 bg-white rounded-md border border-border/50"></div>
+                    <div className="mx-auto w-1/2 h-5 bg-white rounded-md border border-border/50 flex items-center px-2">
+                      <span className="text-[9px] text-slate-400 truncate">detect-ai-official.lovable.app</span>
+                    </div>
                   </div>
                   {/* App Content Placeholder */}
-                  <div className="flex-1 p-6 flex flex-col gap-4">
-                    <div className="w-1/3 h-6 bg-slate-200 rounded-md"></div>
-                    <div className="w-full h-24 bg-slate-100 rounded-md border-2 border-dashed border-slate-300 flex items-center justify-center text-slate-400 text-sm font-medium">
-                      Paste text or drop image here
+                  <div className="flex-1 p-5 flex flex-col gap-3">
+                    <div className="flex items-center gap-2 mb-1">
+                      <img src="/detect-ai-logo.jpg" alt="Detect AI" className="w-5 h-5 rounded object-cover" />
+                      <span className="text-xs font-bold text-slate-700">Detect AI</span>
+                      <span className="text-[9px] text-slate-400">— Detect what's real or fake</span>
                     </div>
-                    <div className="flex justify-between items-center mt-auto">
-                      <div className="w-1/4 h-8 bg-slate-200 rounded-md"></div>
-                      <div className="w-1/4 h-8 bg-primary rounded-md"></div>
-                    </div>
+                    {["AI Text Detect", "AI Image Detect", "AI Video Detect", "Scan History"].map((item, i) => (
+                      <div key={i} className="flex items-center gap-3 p-2.5 rounded-lg border border-slate-100 bg-slate-50">
+                        <div className="w-6 h-6 rounded bg-slate-200 flex-shrink-0"></div>
+                        <div className="w-24 h-2.5 bg-slate-200 rounded"></div>
+                      </div>
+                    ))}
                   </div>
                 </div>
               </div>

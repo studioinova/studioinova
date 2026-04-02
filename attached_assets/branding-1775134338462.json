@@ -1,0 +1,124 @@
+{
+  "colorScheme": "light",
+  "fonts": [
+    {
+      "family": "Inter",
+      "role": "body"
+    },
+    {
+      "family": "CameraPlainVariable",
+      "role": "unknown"
+    },
+    {
+      "family": "Roboto",
+      "role": "body"
+    }
+  ],
+  "colors": {
+    "primary": "#65758B",
+    "secondary": "#939EAE",
+    "accent": "#B2BAC5",
+    "background": "#FFFFFF",
+    "textPrimary": "#14181F",
+    "link": "#B2BAC5"
+  },
+  "typography": {
+    "fontFamilies": {
+      "primary": "Inter",
+      "heading": "Inter"
+    },
+    "fontStacks": {
+      "heading": [
+        "Inter",
+        "sans-serif"
+      ],
+      "body": [
+        "Inter",
+        "sans-serif"
+      ],
+      "paragraph": [
+        "Inter",
+        "sans-serif"
+      ]
+    },
+    "fontSizes": {
+      "h1": "16px",
+      "h2": "18px",
+      "body": "14px"
+    }
+  },
+  "spacing": {
+    "baseUnit": 4,
+    "borderRadius": "6px"
+  },
+  "components": {
+    "buttonPrimary": {
+      "background": "#FFFFFF",
+      "textColor": "#14181F",
+      "borderColor": "#E1E7EF",
+      "borderRadius": "16px",
+      "borderRadiusCorners": {
+        "topLeft": "16px",
+        "topRight": "16px",
+        "bottomRight": "16px",
+        "bottomLeft": "16px"
+      },
+      "shadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.1) 0px 2px 4px -2px"
+    }
+  },
+  "images": {
+    "logo": "https://detect-ai-official.lovable.app/assets/detect-ai-logo-reference-lRn1Hh28.jpg",
+    "favicon": "https://detect-ai-official.lovable.app/pwa-192x192.png",
+    "ogImage": "https://storage.googleapis.com/gpt-engineer-file-uploads/attachments/og-images/c3f9015f-4695-4176-acfc-bad326d9249d?Expires=1773133306&GoogleAccessId=go-api-on-aws%40gpt-engineer-390607.iam.gserviceaccount.com&Signature=1seE%2BeEKNoZ8YHVsqIvgJ1nDiHFZ4ltQEH4ykhKUUPIeLxAmd0fLS0LwTJ3EmAGaim2jzkTPza%2FSLG7epG46sx6EfSFsJ%2FsTKg2L7%2BWR%2FHeU9hhW91YfEzP%2B5vJ0DRH0nun7MRVduhvQSjYooPhF8O%2FCsSwwX3ttKr37obwO%2B%2BvtSIyf6s1HsHkpbSo4IJOiDFLzy%2F%2BcNkzoxk5%2F%2BMgr9mHc%2FNOLtpNmHvkIx18QeeyxoKpacUSgs9qxeHFCZhrR58t%2FiWC4auyk0e%2F18WDPoa6NjSe0PfortaWbKQ6pG2dVne%2BkM1cse2oBxMQOstB8TUiEXskhFzKrqP0xXoLSpQ%3D%3D",
+    "logoAlt": "Detect AI Logo"
+  },
+  "__llm_logo_reasoning": {
+    "selectedIndex": 0,
+    "reasoning": "Selected #0 because it is visible, located in the header, and the alt text matches the brand 'Detect AI'.",
+    "confidence": 0.9,
+    "source": "llm"
+  },
+  "__llm_button_reasoning": {
+    "primary": {
+      "index": 2,
+      "text": "AI Text DetectIdentify AI-written essays, articles, and chats",
+      "reasoning": "Button #2, 'AI Text Detect', is likely the primary CTA due to its action-oriented text and prominence in the context of AI detection services."
+    },
+    "secondary": {
+      "index": 1,
+      "text": "Log in to save scan results",
+      "reasoning": "Button #1, 'Log in to save scan results', serves as a secondary action related to user engagement and account management."
+    },
+    "confidence": 0.85
+  },
+  "personality": {
+    "tone": "professional",
+    "energy": "medium",
+    "targetAudience": "businesses and individuals interested in AI detection"
+  },
+  "designSystem": {
+    "framework": "tailwind",
+    "componentLibrary": ""
+  },
+  "confidence": {
+    "buttons": 0.85,
+    "colors": 0.9,
+    "overall": 0.875
+  },
+  "__llm_metadata": {
+    "logoSelection": {
+      "llmCalled": true,
+      "llmSucceeded": true,
+      "finalSource": "llm",
+      "rawLogoSelection": {
+        "selectedLogoIndex": 0,
+        "selectedLogoReasoning": "Selected #0 because it is visible, located in the header, and the alt text matches the brand 'Detect AI'.",
+        "confidence": 0.9
+      }
+    },
+    "buttonClassification": {
+      "llmCalled": true,
+      "llmSucceeded": true
+    }
+  }
+}
