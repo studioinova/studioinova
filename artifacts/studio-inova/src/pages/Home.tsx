@@ -161,10 +161,16 @@ export default function Home() {
                 alt="Studio Inova workspace"
                 className="w-full object-cover h-56 md:h-72"
               />
-              <div className="absolute inset-0 bg-gradient-to-r from-[#0D1F3C]/60 via-transparent to-transparent flex items-center px-10">
+              {/* Mobile: text below the image */}
+              <div className="block md:hidden bg-[#0D1F3C] px-6 py-5">
+                <p className="text-white/70 text-xs font-medium uppercase tracking-widest mb-1">Studio Inova</p>
+                <p className="text-white text-lg font-bold leading-snug">From idea to launch —<br/>every step, engineered.</p>
+              </div>
+              {/* Desktop: gradient overlay on image */}
+              <div className="hidden md:flex absolute inset-0 bg-gradient-to-r from-[#0D1F3C]/60 via-transparent to-transparent items-center px-10">
                 <div>
                   <p className="text-white/80 text-sm font-medium uppercase tracking-widest mb-1">Studio Inova</p>
-                  <p className="text-white text-2xl md:text-3xl font-bold leading-snug">From idea to launch —<br/>every step, engineered.</p>
+                  <p className="text-white text-3xl font-bold leading-snug">From idea to launch —<br/>every step, engineered.</p>
                 </div>
               </div>
             </div>
