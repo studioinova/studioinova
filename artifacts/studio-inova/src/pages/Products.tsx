@@ -1,7 +1,6 @@
-import { Link } from "wouter";
 import { FadeIn } from "@/components/ui/FadeIn";
 import { Button } from "@/components/ui/button";
-import { ExternalLink, Check, BookOpen } from "lucide-react";
+import { ExternalLink, Check, BookOpen, GraduationCap } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 
 export default function Products() {
@@ -13,6 +12,11 @@ export default function Products() {
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
             Tools engineered for clarity, accuracy, and long-term trust.
           </p>
+        </FadeIn>
+
+        {/* ── Our Apps ── */}
+        <FadeIn className="text-center mb-10">
+          <h2 className="text-2xl md:text-3xl font-bold tracking-tight">Our Apps</h2>
         </FadeIn>
 
         <div className="flex flex-col gap-16">
@@ -140,20 +144,30 @@ export default function Products() {
             </div>
           </FadeIn>
 
-          {/* Ebook Section */}
-          <FadeIn delay={0.2}>
-            <div className="bg-primary/5 rounded-3xl p-8 md:p-12 border border-primary/10 flex flex-col md:flex-row items-center gap-8 md:gap-12">
+        </div>
+
+        {/* ── Academy ── */}
+        <div className="mt-24">
+          <FadeIn className="text-center mb-10">
+            <h2 className="text-2xl md:text-3xl font-bold tracking-tight">Academy</h2>
+          </FadeIn>
+
+          <FadeIn delay={0.1}>
+            <div className="inova-card overflow-hidden border border-border/40 flex flex-col md:flex-row items-center gap-8 md:gap-12 p-8 md:p-12">
               <div className="w-48 h-64 shrink-0 bg-white rounded-lg shadow-xl border border-border flex flex-col items-center justify-center text-center p-6 relative overflow-hidden transform -rotate-3 hover:rotate-0 transition-transform duration-500">
                 <div className="absolute top-0 w-full h-2 bg-primary"></div>
-                <BookOpen className="w-12 h-12 text-primary/40 mb-4" />
+                <GraduationCap className="w-12 h-12 text-primary/40 mb-4" />
                 <h4 className="font-bold text-lg leading-tight mb-2">Zero Knowledge<br/>To App Builder</h4>
                 <p className="text-xs text-muted-foreground mt-auto">By Sazid</p>
               </div>
-              
+
               <div>
-                <h3 className="text-2xl font-bold mb-3">Learn from our Founder</h3>
-                <p className="text-muted-foreground mb-6 max-w-xl">
-                  "Zero Knowledge to App Builder" is a comprehensive guide written by Sazid, the Founder of Studio Inova. It breaks down the process of conceptualizing, designing, and developing digital products for absolute beginners.
+                <Badge className="w-fit mb-4 bg-[#007AFF]/10 text-[#007AFF] border-[#007AFF]/20">
+                  E-book
+                </Badge>
+                <h3 className="text-2xl font-bold mb-3">Inova Academy</h3>
+                <p className="text-muted-foreground mb-6 max-w-xl leading-relaxed">
+                  We offer an educational ebook designed to empower beginners with AI knowledge. It teaches you how to master AI tools and build products with confidence, moving from zero technical background to a creator mindset.
                 </p>
                 <Button variant="default" className="rounded-full">
                   Get the E-book
@@ -162,6 +176,7 @@ export default function Products() {
             </div>
           </FadeIn>
         </div>
+
       </div>
     </div>
   );
