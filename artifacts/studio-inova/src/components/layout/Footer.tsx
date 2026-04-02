@@ -33,9 +33,9 @@ export function Footer() {
 
           <div className="flex flex-col items-center text-center">
             <h4 className="font-bold text-foreground mb-4">Legal</h4>
-            <div className="flex flex-col items-center gap-3.5">
+            <div className="flex items-center gap-2">
               <Link href="/privacy-policy" className="text-sm text-muted-foreground hover:text-primary transition-colors">Privacy Policy</Link>
-              <span className="text-muted-foreground/30 select-none leading-none">|</span>
+              <span className="text-muted-foreground/40 select-none">|</span>
               <Link href="/terms-of-service" className="text-sm text-muted-foreground hover:text-primary transition-colors">Terms of Service</Link>
             </div>
           </div>
