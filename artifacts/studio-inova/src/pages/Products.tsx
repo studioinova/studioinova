@@ -1,168 +1,158 @@
 import { Link } from "wouter";
 import { FadeIn } from "@/components/ui/FadeIn";
 import { Button } from "@/components/ui/button";
-import { ExternalLink, Check, BookOpen } from "lucide-react";
-import { Badge } from "@/components/ui/badge";
+import { ExternalLink, GraduationCap, ScanSearch, BookOpen, Sparkles } from "lucide-react";
+
+const products = [
+  {
+    icon: ScanSearch,
+    name: "Detect AI",
+    badge: "Beta Version",
+    badgeColor: "bg-[#007AFF]/10 text-[#007AFF]",
+    description:
+      "The ultimate tool for detecting AI-generated text, images, and videos. Ensure authenticity in every piece of content.",
+    action: {
+      label: "Try Now",
+      href: "https://detectai.studioinova.com",
+      external: true,
+      disabled: false,
+    },
+  },
+  {
+    icon: BookOpen,
+    name: "AI Manga Translator",
+    badge: "Coming Soon",
+    badgeColor: "bg-amber-100 text-amber-700",
+    description:
+      "Intelligent translation for Manga, Manhua, and Ebooks. We translate the emotion and era, not just the words.",
+    action: {
+      label: "Coming Soon",
+      href: null,
+      external: false,
+      disabled: true,
+    },
+  },
+  {
+    icon: GraduationCap,
+    name: "Inova Academy",
+    badge: "E-books",
+    badgeColor: "bg-emerald-100 text-emerald-700",
+    description:
+      "Master AI tools and app building with our expert-led E-books. From zero knowledge to a creator mindset.",
+    action: {
+      label: "View Details",
+      href: null,
+      external: false,
+      disabled: false,
+    },
+  },
+];
 
 export default function Products() {
   return (
-    <div className="flex flex-col min-h-screen bg-secondary/30 pt-32 pb-24">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-        <FadeIn className="text-center mb-16">
-          <h1 className="text-4xl md:text-5xl font-bold tracking-tight mb-4">Our Products</h1>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Tools engineered for clarity, accuracy, and long-term trust.
-          </p>
-        </FadeIn>
+    <div className="flex flex-col min-h-screen bg-white">
 
-        <div className="flex flex-col gap-16">
-          {/* Featured Product: Detect AI */}
-          <FadeIn>
-            <div className="inova-card overflow-hidden border border-border/40 flex flex-col lg:flex-row group">
-              <div className="p-8 md:p-12 lg:w-1/2 flex flex-col justify-center">
-                <Badge className="w-fit mb-6 bg-emerald-100 text-emerald-800 hover:bg-emerald-100 border-emerald-200">
-                  <span className="w-2 h-2 rounded-full bg-emerald-500 mr-2 animate-pulse"></span>
-                  Live & Available
-                </Badge>
-                
-                <div className="flex items-center gap-4 mb-4">
-                  <div className="w-12 h-12 rounded-xl bg-primary flex items-center justify-center text-white shadow-md">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="w-6 h-6">
-                      <path d="M12 2v20M17 5l-10 14M7 5l10 14" />
-                    </svg>
-                  </div>
-                  <h2 className="text-3xl font-bold">Detect AI</h2>
-                </div>
-                
-                <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
-                  The most advanced AI-powered tool to identify AI-generated text and images in seconds. Built for students, teachers, and creators to ensure authenticity in the digital age.
-                </p>
-
-                <ul className="space-y-3 mb-8">
-                  {["Multi-step Deep Scanning", "Real-time Text Analysis", "Detailed Scan History", "99.8% Accuracy Rate"].map((feature, i) => (
-                    <li key={i} className="flex items-center text-foreground font-medium">
-                      <div className="mr-3 w-5 h-5 rounded-full bg-primary/10 flex items-center justify-center text-primary">
-                        <Check className="w-3 h-3" />
-                      </div>
-                      {feature}
-                    </li>
-                  ))}
-                </ul>
-
-                <Button className="w-fit rounded-full px-8" asChild>
-                  <a href="https://detectai.com" target="_blank" rel="noopener noreferrer">
-                    Visit Detect AI <ExternalLink className="ml-2 w-4 h-4" />
-                  </a>
-                </Button>
-              </div>
-
-              {/* Mockup Area */}
-              <div className="lg:w-1/2 bg-slate-50 p-8 flex items-center justify-center relative overflow-hidden border-t lg:border-t-0 lg:border-l border-border">
-                <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent pointer-events-none" />
-                <div className="w-full max-w-md aspect-[4/3] bg-white rounded-xl shadow-2xl border border-border/50 flex flex-col overflow-hidden relative z-10 group-hover:-translate-y-2 transition-transform duration-500">
-                  {/* Browser Header */}
-                  <div className="h-10 bg-slate-100 border-b border-border flex items-center px-4 gap-2">
-                    <div className="w-3 h-3 rounded-full bg-red-400"></div>
-                    <div className="w-3 h-3 rounded-full bg-amber-400"></div>
-                    <div className="w-3 h-3 rounded-full bg-emerald-400"></div>
-                    <div className="mx-auto w-1/2 h-5 bg-white rounded-md border border-border/50"></div>
-                  </div>
-                  {/* App Content Placeholder */}
-                  <div className="flex-1 p-6 flex flex-col gap-4">
-                    <div className="w-1/3 h-6 bg-slate-200 rounded-md"></div>
-                    <div className="w-full h-24 bg-slate-100 rounded-md border-2 border-dashed border-slate-300 flex items-center justify-center text-slate-400 text-sm font-medium">
-                      Paste text or drop image here
-                    </div>
-                    <div className="flex justify-between items-center mt-auto">
-                      <div className="w-1/4 h-8 bg-slate-200 rounded-md"></div>
-                      <div className="w-1/4 h-8 bg-primary rounded-md"></div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </FadeIn>
-
-          {/* Coming Soon: Vesper AI */}
-          <FadeIn delay={0.1}>
-            <div className="inova-card overflow-hidden border border-border/40 flex flex-col lg:flex-row-reverse group">
-              <div className="p-8 md:p-12 lg:w-1/2 flex flex-col justify-center">
-                <Badge className="w-fit mb-6 bg-amber-100 text-amber-800 hover:bg-amber-100 border-amber-200">
-                  Coming Soon
-                </Badge>
-                
-                <h2 className="text-3xl font-bold mb-4">Vesper AI Translator</h2>
-                
-                <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
-                  An upcoming AI-powered Manga and Ebook translation tool. Breaking language barriers for readers and creators worldwide while preserving original intent and context.
-                </p>
-
-                <ul className="space-y-3 mb-8">
-                  {["Multi-language Support", "Intelligent Manga Panel Detection", "Context-aware Translation Engine"].map((feature, i) => (
-                    <li key={i} className="flex items-center text-foreground font-medium opacity-70">
-                      <div className="mr-3 w-5 h-5 rounded-full bg-slate-100 flex items-center justify-center text-slate-500">
-                        <Check className="w-3 h-3" />
-                      </div>
-                      {feature}
-                    </li>
-                  ))}
-                </ul>
-
-                <Button variant="outline" className="w-fit rounded-full px-8 border-2" disabled>
-                  Join Waitlist
-                </Button>
-              </div>
-
-              {/* Mockup Area */}
-              <div className="lg:w-1/2 bg-slate-900 p-8 flex items-center justify-center relative overflow-hidden border-t lg:border-t-0 lg:border-r border-border">
-                <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-slate-800 to-slate-950 pointer-events-none" />
-                
-                {/* Coming Soon Overlay */}
-                <div className="absolute inset-0 z-20 flex items-center justify-center bg-slate-950/40 backdrop-blur-[2px]">
-                  <div className="px-6 py-3 rounded-full bg-white/10 border border-white/20 text-white font-semibold shadow-2xl backdrop-blur-md">
-                    In Development
-                  </div>
-                </div>
-
-                <div className="w-full max-w-sm aspect-[3/4] bg-slate-800 rounded-xl shadow-2xl border border-slate-700 flex flex-col overflow-hidden relative z-10 opacity-50">
-                  <div className="p-4 border-b border-slate-700 flex justify-between">
-                    <div className="w-20 h-4 bg-slate-600 rounded"></div>
-                    <div className="w-6 h-4 bg-slate-600 rounded"></div>
-                  </div>
-                  <div className="flex-1 grid grid-cols-2 grid-rows-3 gap-2 p-2">
-                    <div className="col-span-2 row-span-1 bg-slate-700 rounded border border-slate-600"></div>
-                    <div className="col-span-1 row-span-2 bg-slate-700 rounded border border-slate-600"></div>
-                    <div className="col-span-1 row-span-1 bg-slate-700 rounded border border-slate-600"></div>
-                    <div className="col-span-1 row-span-1 bg-slate-700 rounded border border-slate-600"></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </FadeIn>
-
-          {/* Ebook Section */}
-          <FadeIn delay={0.2}>
-            <div className="bg-primary/5 rounded-3xl p-8 md:p-12 border border-primary/10 flex flex-col md:flex-row items-center gap-8 md:gap-12">
-              <div className="w-48 h-64 shrink-0 bg-white rounded-lg shadow-xl border border-border flex flex-col items-center justify-center text-center p-6 relative overflow-hidden transform -rotate-3 hover:rotate-0 transition-transform duration-500">
-                <div className="absolute top-0 w-full h-2 bg-primary"></div>
-                <BookOpen className="w-12 h-12 text-primary/40 mb-4" />
-                <h4 className="font-bold text-lg leading-tight mb-2">Zero Knowledge<br/>To App Builder</h4>
-                <p className="text-xs text-muted-foreground mt-auto">By Sazid</p>
-              </div>
-              
-              <div>
-                <h3 className="text-2xl font-bold mb-3">Learn from our Founder</h3>
-                <p className="text-muted-foreground mb-6 max-w-xl">
-                  "Zero Knowledge to App Builder" is a comprehensive guide written by Sazid, the Founder of Studio Inova. It breaks down the process of conceptualizing, designing, and developing digital products for absolute beginners.
-                </p>
-                <Button variant="default" className="rounded-full">
-                  Get the E-book
-                </Button>
-              </div>
-            </div>
+      {/* Hero */}
+      <section className="pt-36 pb-20 bg-[#F8F9FA]">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <FadeIn direction="up">
+            <p className="text-sm font-semibold text-[#007AFF] uppercase tracking-widest mb-3">
+              What We Build
+            </p>
+            <h1 className="text-4xl md:text-5xl font-bold text-[#0D1F3C] mb-5 leading-tight">
+              Our Innovative Products
+            </h1>
+            <p className="text-lg text-[#4A5568] max-w-2xl mx-auto leading-relaxed">
+              Simple, AI-driven tools designed to empower your digital journey.
+            </p>
           </FadeIn>
         </div>
-      </div>
+      </section>
+
+      {/* Product Grid */}
+      <section className="py-20 bg-white">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch">
+            {products.map(({ icon: Icon, name, badge, badgeColor, description, action }, i) => (
+              <FadeIn key={name} delay={i * 0.1} className="h-full">
+                <div
+                  className="bg-white border border-gray-100 h-full flex flex-col p-8 cursor-default"
+                  style={{
+                    borderRadius: "20px",
+                    boxShadow: "0 8px 32px rgba(0,0,0,0.05), 0 1px 4px rgba(0,0,0,0.03)",
+                    transition: "transform 0.3s ease, box-shadow 0.3s ease",
+                  }}
+                  onMouseEnter={e => {
+                    (e.currentTarget as HTMLDivElement).style.transform = "translateY(-5px)";
+                    (e.currentTarget as HTMLDivElement).style.boxShadow =
+                      "0 20px 48px rgba(0,122,255,0.10), 0 4px 12px rgba(0,0,0,0.05)";
+                  }}
+                  onMouseLeave={e => {
+                    (e.currentTarget as HTMLDivElement).style.transform = "translateY(0)";
+                    (e.currentTarget as HTMLDivElement).style.boxShadow =
+                      "0 8px 32px rgba(0,0,0,0.05), 0 1px 4px rgba(0,0,0,0.03)";
+                  }}
+                >
+                  {/* Icon */}
+                  <div
+                    className="w-14 h-14 rounded-2xl flex items-center justify-center mb-6 flex-shrink-0"
+                    style={{
+                      background: "rgba(0, 122, 255, 0.09)",
+                      boxShadow: "0 0 0 8px rgba(0, 122, 255, 0.04)",
+                    }}
+                  >
+                    <Icon className="w-7 h-7" style={{ color: "#007AFF" }} strokeWidth={1.75} />
+                  </div>
+
+                  {/* Badge */}
+                  <span
+                    className={`inline-block text-xs font-semibold px-3 py-1 rounded-full mb-4 w-fit ${badgeColor}`}
+                  >
+                    {badge}
+                  </span>
+
+                  {/* Name */}
+                  <h2 className="text-xl font-bold text-[#0D1F3C] mb-3">{name}</h2>
+
+                  {/* Description */}
+                  <p className="text-[#4A5568] text-sm leading-relaxed flex-1">{description}</p>
+
+                  {/* Action Button */}
+                  <div className="mt-8">
+                    {action.disabled ? (
+                      <button
+                        disabled
+                        className="w-full py-2.5 rounded-xl text-sm font-semibold text-[#A0AEC0] bg-gray-100 cursor-not-allowed"
+                      >
+                        {action.label}
+                      </button>
+                    ) : action.external && action.href ? (
+                      <a
+                        href={action.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center justify-center gap-2 w-full py-2.5 rounded-xl text-sm font-semibold text-white transition-opacity hover:opacity-90"
+                        style={{ background: "#007AFF" }}
+                      >
+                        {action.label}
+                        <ExternalLink className="w-3.5 h-3.5" />
+                      </a>
+                    ) : (
+                      <button
+                        className="flex items-center justify-center gap-2 w-full py-2.5 rounded-xl text-sm font-semibold text-white transition-opacity hover:opacity-90"
+                        style={{ background: "#007AFF" }}
+                      >
+                        {action.label}
+                      </button>
+                    )}
+                  </div>
+                </div>
+              </FadeIn>
+            ))}
+          </div>
+        </div>
+      </section>
+
     </div>
   );
 }
