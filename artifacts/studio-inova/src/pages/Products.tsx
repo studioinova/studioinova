@@ -1,7 +1,93 @@
+import { useState, useRef } from "react";
 import { FadeIn } from "@/components/ui/FadeIn";
 import { Button } from "@/components/ui/button";
-import { ExternalLink, Check, BookOpen, GraduationCap } from "lucide-react";
+import { ExternalLink, Check, BookOpen, GraduationCap, ChevronLeft, ChevronRight } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
+
+const DETECT_AI_SLIDES = [
+  { src: "/detect-ai-slide-1.png", alt: "Detect AI — Main Interface" },
+  { src: "/detect-ai-slide-2.png", alt: "Detect AI — AI Text Detector" },
+  { src: "/detect-ai-slide-3.png", alt: "Detect AI — Scan Results" },
+  { src: "/detect-ai-slide-4.png", alt: "Detect AI — Scan History" },
+];
+
+function DetectAICarousel() {
+  const [current, setCurrent] = useState(0);
+  const touchStartX = useRef<number | null>(null);
+
+  const prev = () => setCurrent(i => (i === 0 ? DETECT_AI_SLIDES.length - 1 : i - 1));
+  const next = () => setCurrent(i => (i === DETECT_AI_SLIDES.length - 1 ? 0 : i + 1));
+
+  const onTouchStart = (e: React.TouchEvent) => {
+    touchStartX.current = e.touches[0].clientX;
+  };
+  const onTouchEnd = (e: React.TouchEvent) => {
+    if (touchStartX.current === null) return;
+    const diff = touchStartX.current - e.changedTouches[0].clientX;
+    if (diff > 40) next();
+    else if (diff < -40) prev();
+    touchStartX.current = null;
+  };
+
+  return (
+    <div className="relative w-full h-full flex flex-col items-center justify-center gap-4 select-none">
+      {/* Phone frame */}
+      <div className="relative flex items-center justify-center w-full">
+        {/* Left arrow */}
+        <button
+          onClick={prev}
+          className="absolute left-0 z-10 w-9 h-9 rounded-full flex items-center justify-center shadow-md transition-opacity hover:opacity-80"
+          style={{ background: "#007AFF" }}
+          aria-label="Previous"
+        >
+          <ChevronLeft className="w-5 h-5 text-white" />
+        </button>
+
+        {/* Slide */}
+        <div
+          className="mx-12 rounded-2xl overflow-hidden shadow-2xl border border-slate-200"
+          style={{ width: "210px", aspectRatio: "9/16", background: "#fff" }}
+          onTouchStart={onTouchStart}
+          onTouchEnd={onTouchEnd}
+        >
+          <img
+            src={DETECT_AI_SLIDES[current].src}
+            alt={DETECT_AI_SLIDES[current].alt}
+            className="w-full h-full object-cover transition-opacity duration-300"
+            style={{ display: "block" }}
+          />
+        </div>
+
+        {/* Right arrow */}
+        <button
+          onClick={next}
+          className="absolute right-0 z-10 w-9 h-9 rounded-full flex items-center justify-center shadow-md transition-opacity hover:opacity-80"
+          style={{ background: "#007AFF" }}
+          aria-label="Next"
+        >
+          <ChevronRight className="w-5 h-5 text-white" />
+        </button>
+      </div>
+
+      {/* Dot indicators */}
+      <div className="flex items-center gap-2">
+        {DETECT_AI_SLIDES.map((_, i) => (
+          <button
+            key={i}
+            onClick={() => setCurrent(i)}
+            className="rounded-full transition-all"
+            style={{
+              width: i === current ? "20px" : "8px",
+              height: "8px",
+              background: i === current ? "#007AFF" : "rgba(0,122,255,0.25)",
+            }}
+            aria-label={`Go to slide ${i + 1}`}
+          />
+        ))}
+      </div>
+    </div>
+  );
+}
 
 export default function Products() {
   return (
@@ -87,33 +173,11 @@ export default function Products() {
                 </Button>
               </div>
 
-              {/* Mockup Area */}
-              <div className="lg:w-1/2 bg-slate-50 p-8 flex items-center justify-center relative overflow-hidden border-t lg:border-t-0 lg:border-l border-border">
+              {/* Carousel Area */}
+              <div className="lg:w-1/2 bg-slate-50 p-8 flex items-center justify-center relative overflow-hidden border-t lg:border-t-0 lg:border-l border-border min-h-[400px]">
                 <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent pointer-events-none" />
-                <div className="w-full max-w-md aspect-[4/3] bg-white rounded-xl shadow-2xl border border-border/50 flex flex-col overflow-hidden relative z-10 group-hover:-translate-y-2 transition-transform duration-500">
-                  {/* Browser Header */}
-                  <div className="h-10 bg-slate-100 border-b border-border flex items-center px-4 gap-2">
-                    <div className="w-3 h-3 rounded-full bg-red-400"></div>
-                    <div className="w-3 h-3 rounded-full bg-amber-400"></div>
-                    <div className="w-3 h-3 rounded-full bg-emerald-400"></div>
-                    <div className="mx-auto w-1/2 h-5 bg-white rounded-md border border-border/50 flex items-center px-2">
-                      <span className="text-[9px] text-slate-400 truncate">detect-ai-official.lovable.app</span>
-                    </div>
-                  </div>
-                  {/* App Content Placeholder */}
-                  <div className="flex-1 p-5 flex flex-col gap-3">
-                    <div className="flex items-center gap-2 mb-1">
-                      <img src="/detect-ai-logo.jpg" alt="Detect AI" className="w-5 h-5 rounded object-cover" />
-                      <span className="text-xs font-bold text-slate-700">Detect AI</span>
-                      <span className="text-[9px] text-slate-400">— Detect what's real or fake</span>
-                    </div>
-                    {["AI Text Detect", "AI Image Detect", "AI Video Detect", "Scan History"].map((item, i) => (
-                      <div key={i} className="flex items-center gap-3 p-2.5 rounded-lg border border-slate-100 bg-slate-50">
-                        <div className="w-6 h-6 rounded bg-slate-200 flex-shrink-0"></div>
-                        <div className="w-24 h-2.5 bg-slate-200 rounded"></div>
-                      </div>
-                    ))}
-                  </div>
+                <div className="relative z-10 w-full h-full flex items-center justify-center">
+                  <DetectAICarousel />
                 </div>
               </div>
             </div>
