@@ -1,7 +1,7 @@
 import { useState, useRef } from "react";
 import { FadeIn } from "@/components/ui/FadeIn";
 import { Button } from "@/components/ui/button";
-import { ExternalLink, Check, BookOpen, GraduationCap, ChevronLeft, ChevronRight } from "lucide-react";
+import { ExternalLink, Check, BookOpen, GraduationCap, ChevronLeft, ChevronRight, Languages, Sparkles } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 
 const DETECT_AI_SLIDES = [
@@ -187,28 +187,61 @@ export default function Products() {
           <FadeIn delay={0.1}>
             <div className="inova-card overflow-hidden border border-border/40 flex flex-col lg:flex-row-reverse group">
               <div className="p-8 md:p-12 lg:w-1/2 flex flex-col justify-center">
-                <Badge className="w-fit mb-6 bg-amber-100 text-amber-800 hover:bg-amber-100 border-amber-200">
+                <Badge className="w-fit mb-6 border-0" style={{ background: "rgba(0,122,255,0.1)", color: "#007AFF" }}>
+                  <Sparkles className="w-3 h-3 mr-1.5" />
                   Coming Soon
                 </Badge>
-                
-                <h2 className="text-3xl font-bold mb-4">AI Manga Translator</h2>
-                
-                <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
-                  An upcoming AI-powered Manga and Ebook translation tool. Breaking language barriers for readers and creators worldwide while preserving original intent and context.
-                </p>
 
-                <ul className="space-y-3 mb-8">
-                  {["Multi-language Support", "Intelligent Manga Panel Detection", "Context-aware Translation Engine"].map((feature, i) => (
-                    <li key={i} className="flex items-center text-foreground font-medium opacity-70">
-                      <div className="mr-3 w-5 h-5 rounded-full bg-slate-100 flex items-center justify-center text-slate-500">
-                        <Check className="w-3 h-3" />
-                      </div>
-                      {feature}
-                    </li>
-                  ))}
-                </ul>
+                <div className="flex items-center gap-4 mb-4">
+                  <div className="relative w-12 h-12 flex-shrink-0">
+                    <div className="w-12 h-12 rounded-xl flex items-center justify-center" style={{ background: "rgba(0,122,255,0.1)" }}>
+                      <Languages className="w-6 h-6" style={{ color: "#007AFF" }} strokeWidth={1.75} />
+                    </div>
+                    <Sparkles className="absolute -top-1 -right-1 w-3.5 h-3.5" style={{ color: "#007AFF" }} />
+                  </div>
+                  <h2 className="text-3xl font-bold">AI Manga Translator — Intelligent Manga Translation</h2>
+                </div>
 
-                <Button variant="outline" className="w-fit rounded-full px-8 border-2" disabled>
+                <div
+                  className="detect-ai-scroll mb-8 pr-3 space-y-5"
+                  style={{ height: "180px", overflowY: "auto" }}
+                >
+                  <div className="text-sm leading-relaxed space-y-4">
+                    <div>
+                      <span className="font-bold" style={{ color: "#007AFF" }}>The Concept — </span>
+                      <span className="text-muted-foreground">A revolutionary tool for Manga, Manhua, and E-book lovers. We don't just translate words; we translate the soul of the story.</span>
+                    </div>
+                    <div>
+                      <span className="font-bold" style={{ color: "#007AFF" }}>Emotion Engine — </span>
+                      <span className="text-muted-foreground">Our AI detects the context and emotion behind every dialogue to ensure the translation feels natural and keeps the original impact.</span>
+                    </div>
+                    <div>
+                      <span className="font-bold" style={{ color: "#007AFF" }}>Era-Specific Translation — </span>
+                      <span className="text-muted-foreground">Whether it's a historical Samurai manga or a futuristic Sci-fi, the language style adapts to the era and genre for an authentic reading experience.</span>
+                    </div>
+                  </div>
+
+                  <ul className="space-y-3 pt-1">
+                    {[
+                      "Automatic Speech Bubble Detection: No need to select text; our AI finds and replaces text within bubbles.",
+                      "Timeline Translation: Keeps track of names and terms for consistency across chapters.",
+                      "Age-Verified Filtering: Ensures a safe reading experience for all ages.",
+                    ].map((feature, i) => (
+                      <li key={i} className="flex items-start text-sm text-foreground font-medium opacity-80">
+                        <div className="mr-3 mt-0.5 w-5 h-5 flex-shrink-0 rounded-full flex items-center justify-center" style={{ background: "rgba(0,122,255,0.1)" }}>
+                          <Check className="w-3 h-3" style={{ color: "#007AFF" }} />
+                        </div>
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                <Button
+                  className="w-fit rounded-full px-8"
+                  style={{ background: "rgba(0,122,255,0.65)", color: "#fff", cursor: "not-allowed" }}
+                  disabled
+                >
                   Join Waitlist
                 </Button>
               </div>
