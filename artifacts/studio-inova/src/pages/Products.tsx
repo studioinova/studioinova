@@ -339,49 +339,49 @@ export default function Products() {
             <h2 className="text-2xl md:text-3xl font-bold tracking-tight">Studio Inova E-books</h2>
           </FadeIn>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-stretch">
+          <div className="flex flex-col gap-6">
 
-            {/* ── Card 1: Zero Knowledge to App Builder ── */}
+            {/* ── Card 1: Zero Knowledge to App Builder — Featured Full-Width Horizontal ── */}
             <FadeIn delay={0.1}>
-              <div className="inova-card overflow-hidden border border-border/40 relative bg-white flex flex-col h-full">
+              <div className="inova-card overflow-hidden border border-border/40 bg-white shadow-md">
+                <div className="flex flex-col md:flex-row">
 
-                {/* Buy Now badge */}
-                <div className="absolute top-4 right-4 z-10">
-                  <span className="text-[11px] font-bold px-3 py-1 rounded-full shadow" style={{ background: "#007AFF", color: "#fff", letterSpacing: "0.04em" }}>
-                    Buy Now
-                  </span>
-                </div>
-
-                <div className="flex flex-col items-center p-8 gap-6 flex-1">
-
-                  {/* Book cover */}
-                  <div className="shrink-0 flex items-center justify-center pt-2">
+                  {/* Left: Book cover */}
+                  <div className="md:w-64 lg:w-72 shrink-0 flex items-center justify-center p-8 md:py-10 md:pl-10 md:pr-6">
                     <div
-                      className="relative w-36"
+                      className="relative w-44 md:w-full"
                       style={{
-                        filter: "drop-shadow(-6px 10px 20px rgba(0,0,0,0.3)) drop-shadow(2px 2px 0px rgba(0,0,0,0.2))",
-                        transform: "perspective(600px) rotateY(8deg) rotateX(2deg)",
+                        filter: "drop-shadow(-8px 14px 28px rgba(0,0,0,0.32)) drop-shadow(2px 2px 0px rgba(0,0,0,0.2))",
+                        transform: "perspective(700px) rotateY(8deg) rotateX(2deg)",
                         transition: "transform 0.4s ease",
                       }}
-                      onMouseEnter={e => (e.currentTarget.style.transform = "perspective(600px) rotateY(0deg) rotateX(0deg)")}
-                      onMouseLeave={e => (e.currentTarget.style.transform = "perspective(600px) rotateY(8deg) rotateX(2deg)")}
+                      onMouseEnter={e => (e.currentTarget.style.transform = "perspective(700px) rotateY(0deg) rotateX(0deg)")}
+                      onMouseLeave={e => (e.currentTarget.style.transform = "perspective(700px) rotateY(8deg) rotateX(2deg)")}
                     >
-                      <img src="/ebook-cover.jpg" alt="Zero Knowledge to App Builder" className="w-full rounded-lg" style={{ display: "block" }} />
-                      <div className="absolute top-0 left-0 w-2 h-full rounded-l-lg" style={{ background: "linear-gradient(to right, rgba(255,255,255,0.18), transparent)" }} />
+                      <img src="/ebook-cover.jpg" alt="Zero Knowledge to App Builder" className="w-full rounded-xl" style={{ display: "block" }} />
+                      <div className="absolute top-0 left-0 w-2.5 h-full rounded-l-xl" style={{ background: "linear-gradient(to right, rgba(255,255,255,0.2), transparent)" }} />
                     </div>
                   </div>
 
-                  {/* Text */}
-                  <div className="w-full flex-1 flex flex-col">
-                    <div className="flex flex-wrap gap-2 mb-3">
+                  {/* Right: Text */}
+                  <div className="flex-1 flex flex-col justify-center p-8 md:py-10 md:pl-4 md:pr-10 relative">
+
+                    {/* Buy Now badge */}
+                    <div className="absolute top-5 right-5">
+                      <span className="text-[11px] font-bold px-3 py-1 rounded-full shadow" style={{ background: "#007AFF", color: "#fff", letterSpacing: "0.04em" }}>
+                        Buy Now
+                      </span>
+                    </div>
+
+                    <div className="flex flex-wrap gap-2 mb-4">
                       <Badge className="border-0" style={{ background: "rgba(0,122,255,0.1)", color: "#007AFF" }}>E-book</Badge>
                       <Badge className="border-0" style={{ background: "rgba(0,122,255,0.07)", color: "#007AFF" }}>2026</Badge>
                     </div>
 
-                    <h3 className="text-xl font-bold mb-1">Zero Knowledge to App Builder</h3>
-                    <p className="text-sm mb-4" style={{ color: "#007AFF" }}>How anyone can build apps using AI — without coding.</p>
+                    <h3 className="text-2xl md:text-3xl font-bold mb-1">Zero Knowledge to App Builder</h3>
+                    <p className="text-sm mb-5" style={{ color: "#007AFF" }}>How anyone can build apps using AI — without coding.</p>
 
-                    <div className="detect-ai-scroll mb-5 pr-2 text-sm leading-relaxed space-y-3 flex-1" style={{ height: "150px", overflowY: "auto" }}>
+                    <div className="detect-ai-scroll mb-6 pr-2 text-sm leading-relaxed space-y-3" style={{ height: "150px", overflowY: "auto" }}>
                       <div>
                         <span className="font-bold" style={{ color: "#007AFF" }}>The Goal — </span>
                         <span className="text-muted-foreground">This book is designed to change your mindset. Learn how to turn ideas into real applications using the power of AI.</span>
@@ -417,41 +417,31 @@ export default function Products() {
 
             {/* ── Card 2: The Art of Prompt Engineering ── */}
             <FadeIn delay={0.2}>
-              <div className="inova-card overflow-hidden border border-border/40 relative bg-white flex flex-col h-full">
+              <div className="inova-card overflow-hidden border border-border/40 bg-white shadow-sm">
+                <div className="flex flex-col md:flex-row">
 
-                {/* Coming Soon badge */}
-                <div className="absolute top-4 right-4 z-10">
-                  <span className="text-[11px] font-bold px-3 py-1 rounded-full shadow" style={{ background: "rgba(0,122,255,0.12)", color: "#007AFF", letterSpacing: "0.04em", border: "1px solid rgba(0,122,255,0.25)" }}>
-                    Coming Soon
-                  </span>
-                </div>
-
-                <div className="flex flex-col items-center p-8 gap-6 flex-1">
-
-                  {/* Placeholder book cover */}
-                  <div className="shrink-0 flex items-center justify-center pt-2">
+                  {/* Left: Placeholder cover */}
+                  <div className="md:w-52 lg:w-60 shrink-0 flex items-center justify-center p-7 md:py-8 md:pl-8 md:pr-5">
                     <div
-                      className="relative w-36"
+                      className="relative w-36 md:w-full"
                       style={{
-                        filter: "drop-shadow(-6px 10px 20px rgba(0,0,0,0.35)) drop-shadow(2px 2px 0px rgba(0,0,0,0.2))",
-                        transform: "perspective(600px) rotateY(-8deg) rotateX(2deg)",
+                        filter: "drop-shadow(-6px 10px 22px rgba(0,0,0,0.35)) drop-shadow(2px 2px 0px rgba(0,0,0,0.2))",
+                        transform: "perspective(700px) rotateY(-8deg) rotateX(2deg)",
                         transition: "transform 0.4s ease",
                       }}
-                      onMouseEnter={e => (e.currentTarget.style.transform = "perspective(600px) rotateY(0deg) rotateX(0deg)")}
-                      onMouseLeave={e => (e.currentTarget.style.transform = "perspective(600px) rotateY(-8deg) rotateX(2deg)")}
+                      onMouseEnter={e => (e.currentTarget.style.transform = "perspective(700px) rotateY(0deg) rotateX(0deg)")}
+                      onMouseLeave={e => (e.currentTarget.style.transform = "perspective(700px) rotateY(-8deg) rotateX(2deg)")}
                     >
-                      {/* Placeholder cover — dark blue with AI spark */}
-                      <div className="w-full rounded-lg overflow-hidden" style={{ aspectRatio: "2/3", background: "linear-gradient(160deg, #0a1628 0%, #0d2147 50%, #0a1628 100%)" }}>
-                        <div className="w-full h-full flex flex-col items-center justify-center gap-4 p-5 relative">
-                          {/* Stars / sparks */}
+                      <div className="w-full rounded-xl overflow-hidden" style={{ aspectRatio: "2/3", background: "linear-gradient(160deg, #0a1628 0%, #0d2147 50%, #0a1628 100%)" }}>
+                        <div className="w-full h-full flex flex-col items-center justify-center gap-3 p-5 relative">
                           <div className="absolute inset-0 opacity-20">
                             {[...Array(14)].map((_, i) => (
                               <div key={i} className="absolute w-0.5 h-0.5 rounded-full bg-white"
                                 style={{ top: `${8 + (i * 37) % 85}%`, left: `${5 + (i * 53) % 90}%` }} />
                             ))}
                           </div>
-                          <div className="w-14 h-14 rounded-2xl flex items-center justify-center" style={{ background: "rgba(0,122,255,0.2)", border: "1px solid rgba(0,122,255,0.4)" }}>
-                            <Sparkles className="w-7 h-7" style={{ color: "#007AFF" }} />
+                          <div className="w-12 h-12 rounded-2xl flex items-center justify-center" style={{ background: "rgba(0,122,255,0.2)", border: "1px solid rgba(0,122,255,0.4)" }}>
+                            <Sparkles className="w-6 h-6" style={{ color: "#007AFF" }} />
                           </div>
                           <div className="text-center">
                             <p className="text-white font-bold text-[11px] leading-tight">The Art of</p>
@@ -463,21 +453,29 @@ export default function Products() {
                           </div>
                         </div>
                       </div>
-                      <div className="absolute top-0 left-0 w-2 h-full rounded-l-lg" style={{ background: "linear-gradient(to right, rgba(255,255,255,0.12), transparent)" }} />
+                      <div className="absolute top-0 left-0 w-2 h-full rounded-l-xl" style={{ background: "linear-gradient(to right, rgba(255,255,255,0.12), transparent)" }} />
                     </div>
                   </div>
 
-                  {/* Text */}
-                  <div className="w-full flex-1 flex flex-col">
+                  {/* Right: Text */}
+                  <div className="flex-1 flex flex-col justify-center p-7 md:py-8 md:pl-4 md:pr-8 relative">
+
+                    {/* Coming Soon badge */}
+                    <div className="absolute top-5 right-5">
+                      <span className="text-[11px] font-bold px-3 py-1 rounded-full" style={{ background: "rgba(0,122,255,0.1)", color: "#007AFF", letterSpacing: "0.04em", border: "1px solid rgba(0,122,255,0.25)" }}>
+                        Coming Soon
+                      </span>
+                    </div>
+
                     <div className="flex flex-wrap gap-2 mb-3">
                       <Badge className="border-0" style={{ background: "rgba(0,122,255,0.1)", color: "#007AFF" }}>E-book</Badge>
                       <Badge className="border-0" style={{ background: "rgba(0,122,255,0.07)", color: "#007AFF" }}>2026</Badge>
                     </div>
 
-                    <h3 className="text-xl font-bold mb-1">The Art of Prompt Engineering</h3>
+                    <h3 className="text-xl md:text-2xl font-bold mb-1">The Art of Prompt Engineering</h3>
                     <p className="text-sm mb-4" style={{ color: "#007AFF" }}>Master the language of AI to get professional results.</p>
 
-                    <div className="detect-ai-scroll mb-5 pr-2 text-sm leading-relaxed flex-1" style={{ height: "150px", overflowY: "auto" }}>
+                    <div className="detect-ai-scroll mb-5 pr-2 text-sm leading-relaxed" style={{ height: "130px", overflowY: "auto" }}>
                       <span className="text-muted-foreground">Learn how to communicate with AI like a pro. This guide will teach you how to write perfect prompts for coding, designing, and business automation. Unlock the full potential of every AI tool you use — from writing to development to creative work.</span>
                     </div>
 
