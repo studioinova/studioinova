@@ -1,7 +1,7 @@
 import { useState, useRef } from "react";
 import { FadeIn } from "@/components/ui/FadeIn";
 import { Button } from "@/components/ui/button";
-import { ExternalLink, Check, BookOpen, GraduationCap, ChevronLeft, ChevronRight, Sparkles } from "lucide-react";
+import { ExternalLink, Check, BookOpen, GraduationCap, ChevronLeft, ChevronRight } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 
 const DETECT_AI_SLIDES = [
@@ -188,18 +188,16 @@ export default function Products() {
             <div className="inova-card overflow-hidden border border-border/40 flex flex-col lg:flex-row-reverse group">
               <div className="p-8 md:p-12 lg:w-1/2 flex flex-col justify-center">
                 <Badge className="w-fit mb-6 border-0" style={{ background: "rgba(0,122,255,0.1)", color: "#007AFF" }}>
-                  <Sparkles className="w-3 h-3 mr-1.5" />
                   Coming Soon
                 </Badge>
 
                 <div className="flex items-center gap-4 mb-4">
-                  <div className="relative w-12 h-12 flex-shrink-0">
+                  <div className="w-12 h-12 flex-shrink-0">
                     <img
                       src="/manga-translator-logo.png"
                       alt="AI Manga Translator"
                       className="w-12 h-12 rounded-xl object-cover shadow-sm"
                     />
-                    <Sparkles className="absolute -top-1 -right-1 w-3.5 h-3.5" style={{ color: "#007AFF" }} />
                   </div>
                   <h2 className="text-3xl font-bold">AI Manga Translator — Intelligent Manga Translation</h2>
                 </div>
