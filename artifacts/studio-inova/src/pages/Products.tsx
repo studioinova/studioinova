@@ -1,7 +1,7 @@
 import { useState, useRef } from "react";
 import { FadeIn } from "@/components/ui/FadeIn";
 import { Button } from "@/components/ui/button";
-import { ExternalLink, Check, BookOpen, GraduationCap, ChevronLeft, ChevronRight, Languages, Sparkles } from "lucide-react";
+import { ExternalLink, Check, BookOpen, GraduationCap, ChevronLeft, ChevronRight, Sparkles } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 
 const DETECT_AI_SLIDES = [
@@ -194,9 +194,11 @@ export default function Products() {
 
                 <div className="flex items-center gap-4 mb-4">
                   <div className="relative w-12 h-12 flex-shrink-0">
-                    <div className="w-12 h-12 rounded-xl flex items-center justify-center" style={{ background: "rgba(0,122,255,0.1)" }}>
-                      <Languages className="w-6 h-6" style={{ color: "#007AFF" }} strokeWidth={1.75} />
-                    </div>
+                    <img
+                      src="/manga-translator-logo.png"
+                      alt="AI Manga Translator"
+                      className="w-12 h-12 rounded-xl object-cover shadow-sm"
+                    />
                     <Sparkles className="absolute -top-1 -right-1 w-3.5 h-3.5" style={{ color: "#007AFF" }} />
                   </div>
                   <h2 className="text-3xl font-bold">AI Manga Translator — Intelligent Manga Translation</h2>
@@ -250,29 +252,25 @@ export default function Products() {
                     <div className="w-3 h-3 rounded-full bg-red-500/70"></div>
                     <div className="w-3 h-3 rounded-full bg-yellow-500/70"></div>
                     <div className="w-3 h-3 rounded-full bg-green-500/70"></div>
-                    <span className="ml-3 text-slate-400 text-[11px]">emotion-engine.js — AI Manga Translator</span>
+                    <span className="ml-3 text-slate-400 text-[11px]">manga-status.json — AI Manga Translator</span>
                   </div>
 
                   {/* Tab bar */}
                   <div className="flex bg-[#252526] border-b border-slate-800">
-                    <div className="px-4 py-1.5 bg-[#1e1e1e] border-r border-slate-800 text-slate-300 text-[11px]">emotion-engine.js</div>
-                    <div className="px-4 py-1.5 text-slate-500 text-[11px]">translator.js</div>
+                    <div className="px-4 py-1.5 bg-[#1e1e1e] border-r border-slate-800 text-slate-300 text-[11px]">manga-status.json</div>
+                    <div className="px-4 py-1.5 text-slate-500 text-[11px]">translator-config.json</div>
                   </div>
 
                   {/* Code body */}
                   <div className="flex-1 p-5 overflow-hidden leading-relaxed" style={{ background: "#1e1e1e" }}>
-                    {/* Line numbers + code */}
                     {[
-                      { ln: "1",  code: <span className="text-slate-500">{"// AI Manga Translator - Emotion Engine"}</span> },
-                      { ln: "2",  code: <span>&nbsp;</span> },
-                      { ln: "3",  code: <><span className="text-[#569cd6]">const </span><span className="text-[#dcdcaa]">translateDialogue</span><span className="text-slate-300"> = (</span><span className="text-[#9cdcfe]">bubble_text</span><span className="text-slate-300">, </span><span className="text-[#9cdcfe]">context_era</span><span className="text-slate-300">) {"=>"} {"{"}</span></> },
-                      { ln: "4",  code: <><span className="text-slate-500">&nbsp;&nbsp;{"// Detecting emotion & context"}</span></> },
-                      { ln: "5",  code: <><span className="text-[#569cd6]">&nbsp;&nbsp;let </span><span className="text-[#9cdcfe]">emotion</span><span className="text-slate-300"> = </span><span className="text-[#dcdcaa]">analyzeEmotion</span><span className="text-slate-300">(</span><span className="text-[#9cdcfe]">bubble_text</span><span className="text-slate-300">);</span></> },
-                      { ln: "6",  code: <><span className="text-[#569cd6]">&nbsp;&nbsp;let </span><span className="text-[#9cdcfe]">EraAdaptedText</span><span className="text-slate-300"> = </span><span className="text-[#dcdcaa]">adaptEra</span><span className="text-slate-300">(</span><span className="text-[#9cdcfe]">bubble_text</span><span className="text-slate-300">, </span><span className="text-[#9cdcfe]">context_era</span><span className="text-slate-300">);</span></> },
-                      { ln: "7",  code: <><span className="text-[#569cd6]">&nbsp;&nbsp;return </span><span className="text-[#dcdcaa]">translateWithEmotion</span><span className="text-slate-300">(</span><span className="text-[#9cdcfe]">EraAdaptedText</span><span className="text-slate-300">, </span><span className="text-[#9cdcfe]">emotion</span><span className="text-slate-300">);</span></> },
-                      { ln: "8",  code: <span className="text-slate-300">{"}"}</span> },
-                      { ln: "9",  code: <span>&nbsp;</span> },
-                      { ln: "10", code: <span className="text-slate-500">{"// Status: BUILDING EMOTION MODULE"}</span> },
+                      { ln: "1",  code: <span className="text-slate-300">{"{"}</span> },
+                      { ln: "2",  code: <><span className="text-[#9cdcfe]">&nbsp;&nbsp;"MangaTitle"</span><span className="text-slate-300">: </span><span className="text-[#ce9178]">"Project Samurai"</span><span className="text-slate-300">,</span></> },
+                      { ln: "3",  code: <><span className="text-[#9cdcfe]">&nbsp;&nbsp;"CurrentStatus"</span><span className="text-slate-300">: </span><span className="text-[#ce9178]">"UNDER DEVELOPMENT"</span><span className="text-slate-300">,</span></> },
+                      { ln: "4",  code: <><span className="text-[#9cdcfe]">&nbsp;&nbsp;"Module"</span><span className="text-slate-300">: </span><span className="text-[#ce9178]">"EMOTION_ENGINE"</span><span className="text-slate-300">,</span></> },
+                      { ln: "5",  code: <><span className="text-[#9cdcfe]">&nbsp;&nbsp;"Task"</span><span className="text-slate-300">: </span><span className="text-[#ce9178]">"Integrating Automatic Bubble Detection"</span><span className="text-slate-300">,</span></> },
+                      { ln: "6",  code: <><span className="text-[#9cdcfe]">&nbsp;&nbsp;"ReleaseDate"</span><span className="text-slate-300">: </span><span className="text-[#ce9178]">"TBD"</span></> },
+                      { ln: "7",  code: <span className="text-slate-300">{"}"}</span> },
                     ].map(({ ln, code }) => (
                       <div key={ln} className="flex gap-4">
                         <span className="select-none text-slate-600 w-4 text-right shrink-0">{ln}</span>
@@ -282,15 +280,15 @@ export default function Products() {
 
                     {/* Blinking cursor */}
                     <div className="flex gap-4 mt-0.5">
-                      <span className="select-none text-slate-600 w-4 text-right shrink-0">11</span>
+                      <span className="select-none text-slate-600 w-4 text-right shrink-0">8</span>
                       <span className="inline-block w-2 h-3.5 bg-[#007AFF] animate-pulse" />
                     </div>
                   </div>
 
                   {/* Status bar */}
                   <div className="flex items-center justify-between px-4 py-1 text-[10px] text-white" style={{ background: "#007AFF" }}>
-                    <span>JavaScript</span>
-                    <span>Ln 11, Col 1</span>
+                    <span>JSON</span>
+                    <span>Ln 8, Col 1</span>
                   </div>
                 </div>
 
