@@ -39,42 +39,46 @@ export default function Products() {
                 </div>
 
                 <div
-                  className="detect-ai-scroll mb-8 pr-2 text-sm leading-relaxed space-y-4"
-                  style={{ height: "180px", overflowY: "auto" }}
+                  className="detect-ai-scroll mb-8 pr-3 space-y-5"
+                  style={{ height: "250px", overflowY: "auto" }}
                 >
-                  <div>
-                    <span className="font-bold" style={{ color: "#007AFF" }}>What it is — </span>
-                    <span className="text-muted-foreground">Detect AI is a state-of-the-art security tool developed by Studio Inova to verify digital authenticity. It helps students, educators, journalists, and enterprises confirm whether content was created by a human or an AI.</span>
+                  {/* Description */}
+                  <div className="text-sm leading-relaxed space-y-4">
+                    <div>
+                      <span className="font-bold" style={{ color: "#007AFF" }}>What it is — </span>
+                      <span className="text-muted-foreground">Detect AI is a state-of-the-art security tool developed by Studio Inova to verify digital authenticity. It helps students, educators, journalists, and enterprises confirm whether content was created by a human or an AI.</span>
+                    </div>
+                    <div>
+                      <span className="font-bold" style={{ color: "#007AFF" }}>What it does — </span>
+                      <span className="text-muted-foreground">It scans across multiple formats. For <strong className="text-foreground">Text</strong>, it identifies patterns common in LLMs like GPT-4. For <strong className="text-foreground">Images &amp; Videos</strong>, it looks for pixel inconsistencies and deepfake signatures that the human eye cannot detect.</span>
+                    </div>
+                    <div>
+                      <span className="font-bold" style={{ color: "#007AFF" }}>How it works — </span>
+                      <span className="text-muted-foreground">Using advanced neural networks, our engine analyzes linguistic variance and metadata. It doesn't just guess — it calculates the probability of AI involvement through billions of data points, returning a precise confidence score.</span>
+                    </div>
+                    <div>
+                      <span className="font-bold" style={{ color: "#007AFF" }}>The Process — </span>
+                      <span className="text-muted-foreground">Simply paste your content or upload a file. Our Deep Scan engine runs a 3-layer check: <strong className="text-foreground">Linguistic Analysis</strong>, <strong className="text-foreground">Metadata Verification</strong>, and <strong className="text-foreground">Pattern Recognition</strong> — all in seconds.</span>
+                    </div>
                   </div>
-                  <div>
-                    <span className="font-bold" style={{ color: "#007AFF" }}>What it does — </span>
-                    <span className="text-muted-foreground">It scans across multiple formats. For <strong className="text-foreground">Text</strong>, it identifies patterns common in LLMs like GPT-4. For <strong className="text-foreground">Images &amp; Videos</strong>, it looks for pixel inconsistencies and deepfake signatures that the human eye cannot detect.</span>
-                  </div>
-                  <div>
-                    <span className="font-bold" style={{ color: "#007AFF" }}>How it works — </span>
-                    <span className="text-muted-foreground">Using advanced neural networks, our engine analyzes linguistic variance and metadata. It doesn't just guess — it calculates the probability of AI involvement through billions of data points, returning a precise confidence score.</span>
-                  </div>
-                  <div>
-                    <span className="font-bold" style={{ color: "#007AFF" }}>The Process — </span>
-                    <span className="text-muted-foreground">Simply paste your content or upload a file. Our Deep Scan engine runs a 3-layer check: <strong className="text-foreground">Linguistic Analysis</strong>, <strong className="text-foreground">Metadata Verification</strong>, and <strong className="text-foreground">Pattern Recognition</strong> — all in seconds.</span>
-                  </div>
-                </div>
 
-                <ul className="space-y-3 mb-8">
-                  {[
-                    "AI Text Detection: Analyze articles, essays, and reports.",
-                    "Image & Video Scan: Identify deepfakes and AI-generated visuals.",
-                    "High Accuracy: Powered by advanced neural networks for 99%+ precision.",
-                    "Simple Interface: Minimalist and easy-to-use UI for everyone.",
-                  ].map((feature, i) => (
-                    <li key={i} className="flex items-center text-foreground font-medium">
-                      <div className="mr-3 w-5 h-5 flex-shrink-0 rounded-full flex items-center justify-center" style={{ background: "rgba(0,122,255,0.12)" }}>
-                        <Check className="w-3 h-3" style={{ color: "#007AFF" }} />
-                      </div>
-                      {feature}
-                    </li>
-                  ))}
-                </ul>
+                  {/* Feature Checklist */}
+                  <ul className="space-y-3 pt-1">
+                    {[
+                      "AI Text Detection: Analyze articles, essays, and reports.",
+                      "Image & Video Scan: Identify deepfakes and AI-generated visuals.",
+                      "High Accuracy: Powered by advanced neural networks for 99%+ precision.",
+                      "Simple Interface: Minimalist and easy-to-use UI for everyone.",
+                    ].map((feature, i) => (
+                      <li key={i} className="flex items-start text-sm text-foreground font-medium">
+                        <div className="mr-3 mt-0.5 w-5 h-5 flex-shrink-0 rounded-full flex items-center justify-center" style={{ background: "rgba(0,122,255,0.12)" }}>
+                          <Check className="w-3 h-3" style={{ color: "#007AFF" }} />
+                        </div>
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
 
                 <Button className="w-fit rounded-full px-8" style={{ background: "#007AFF" }} asChild>
                   <a href="https://detect-ai-official.lovable.app/" target="_blank" rel="noopener noreferrer">
