@@ -237,13 +237,7 @@ export default function Products() {
                   </ul>
                 </div>
 
-                <Button
-                  className="w-fit rounded-full px-8"
-                  style={{ background: "rgba(0,122,255,0.65)", color: "#fff", cursor: "not-allowed" }}
-                  disabled
-                >
-                  Join Waitlist
-                </Button>
+
               </div>
 
               {/* Mockup Area */}
