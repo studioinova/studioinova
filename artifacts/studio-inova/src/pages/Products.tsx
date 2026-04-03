@@ -240,29 +240,70 @@ export default function Products() {
 
               </div>
 
-              {/* Mockup Area */}
-              <div className="lg:w-1/2 bg-slate-900 p-8 flex items-center justify-center relative overflow-hidden border-t lg:border-t-0 lg:border-r border-border">
-                <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-slate-800 to-slate-950 pointer-events-none" />
-                
-                {/* Coming Soon Overlay */}
-                <div className="absolute inset-0 z-20 flex items-center justify-center bg-slate-950/40 backdrop-blur-[2px]">
-                  <div className="px-6 py-3 rounded-full bg-white/10 border border-white/20 text-white font-semibold shadow-2xl backdrop-blur-md">
-                    In Development
+              {/* Code Editor Mockup */}
+              <div className="lg:w-1/2 bg-slate-950 flex items-stretch relative overflow-hidden border-t lg:border-t-0 lg:border-r border-border min-h-[400px]">
+
+                {/* VS Code-style editor */}
+                <div className="w-full flex flex-col font-mono text-xs">
+                  {/* Title bar */}
+                  <div className="flex items-center gap-2 px-4 py-2.5 bg-[#1e1e1e] border-b border-slate-800">
+                    <div className="w-3 h-3 rounded-full bg-red-500/70"></div>
+                    <div className="w-3 h-3 rounded-full bg-yellow-500/70"></div>
+                    <div className="w-3 h-3 rounded-full bg-green-500/70"></div>
+                    <span className="ml-3 text-slate-400 text-[11px]">emotion-engine.js — AI Manga Translator</span>
+                  </div>
+
+                  {/* Tab bar */}
+                  <div className="flex bg-[#252526] border-b border-slate-800">
+                    <div className="px-4 py-1.5 bg-[#1e1e1e] border-r border-slate-800 text-slate-300 text-[11px]">emotion-engine.js</div>
+                    <div className="px-4 py-1.5 text-slate-500 text-[11px]">translator.js</div>
+                  </div>
+
+                  {/* Code body */}
+                  <div className="flex-1 p-5 overflow-hidden leading-relaxed" style={{ background: "#1e1e1e" }}>
+                    {/* Line numbers + code */}
+                    {[
+                      { ln: "1",  code: <span className="text-slate-500">{"// AI Manga Translator - Emotion Engine"}</span> },
+                      { ln: "2",  code: <span>&nbsp;</span> },
+                      { ln: "3",  code: <><span className="text-[#569cd6]">const </span><span className="text-[#dcdcaa]">translateDialogue</span><span className="text-slate-300"> = (</span><span className="text-[#9cdcfe]">bubble_text</span><span className="text-slate-300">, </span><span className="text-[#9cdcfe]">context_era</span><span className="text-slate-300">) {"=>"} {"{"}</span></> },
+                      { ln: "4",  code: <><span className="text-slate-500">&nbsp;&nbsp;{"// Detecting emotion & context"}</span></> },
+                      { ln: "5",  code: <><span className="text-[#569cd6]">&nbsp;&nbsp;let </span><span className="text-[#9cdcfe]">emotion</span><span className="text-slate-300"> = </span><span className="text-[#dcdcaa]">analyzeEmotion</span><span className="text-slate-300">(</span><span className="text-[#9cdcfe]">bubble_text</span><span className="text-slate-300">);</span></> },
+                      { ln: "6",  code: <><span className="text-[#569cd6]">&nbsp;&nbsp;let </span><span className="text-[#9cdcfe]">EraAdaptedText</span><span className="text-slate-300"> = </span><span className="text-[#dcdcaa]">adaptEra</span><span className="text-slate-300">(</span><span className="text-[#9cdcfe]">bubble_text</span><span className="text-slate-300">, </span><span className="text-[#9cdcfe]">context_era</span><span className="text-slate-300">);</span></> },
+                      { ln: "7",  code: <><span className="text-[#569cd6]">&nbsp;&nbsp;return </span><span className="text-[#dcdcaa]">translateWithEmotion</span><span className="text-slate-300">(</span><span className="text-[#9cdcfe]">EraAdaptedText</span><span className="text-slate-300">, </span><span className="text-[#9cdcfe]">emotion</span><span className="text-slate-300">);</span></> },
+                      { ln: "8",  code: <span className="text-slate-300">{"}"}</span> },
+                      { ln: "9",  code: <span>&nbsp;</span> },
+                      { ln: "10", code: <span className="text-slate-500">{"// Status: BUILDING EMOTION MODULE"}</span> },
+                    ].map(({ ln, code }) => (
+                      <div key={ln} className="flex gap-4">
+                        <span className="select-none text-slate-600 w-4 text-right shrink-0">{ln}</span>
+                        <span className="text-slate-300">{code}</span>
+                      </div>
+                    ))}
+
+                    {/* Blinking cursor */}
+                    <div className="flex gap-4 mt-0.5">
+                      <span className="select-none text-slate-600 w-4 text-right shrink-0">11</span>
+                      <span className="inline-block w-2 h-3.5 bg-[#007AFF] animate-pulse" />
+                    </div>
+                  </div>
+
+                  {/* Status bar */}
+                  <div className="flex items-center justify-between px-4 py-1 text-[10px] text-white" style={{ background: "#007AFF" }}>
+                    <span>JavaScript</span>
+                    <span>Ln 11, Col 1</span>
                   </div>
                 </div>
 
-                <div className="w-full max-w-sm aspect-[3/4] bg-slate-800 rounded-xl shadow-2xl border border-slate-700 flex flex-col overflow-hidden relative z-10 opacity-50">
-                  <div className="p-4 border-b border-slate-700 flex justify-between">
-                    <div className="w-20 h-4 bg-slate-600 rounded"></div>
-                    <div className="w-6 h-4 bg-slate-600 rounded"></div>
-                  </div>
-                  <div className="flex-1 grid grid-cols-2 grid-rows-3 gap-2 p-2">
-                    <div className="col-span-2 row-span-1 bg-slate-700 rounded border border-slate-600"></div>
-                    <div className="col-span-1 row-span-2 bg-slate-700 rounded border border-slate-600"></div>
-                    <div className="col-span-1 row-span-1 bg-slate-700 rounded border border-slate-600"></div>
-                    <div className="col-span-1 row-span-1 bg-slate-700 rounded border border-slate-600"></div>
+                {/* Overlay banner */}
+                <div className="absolute inset-0 z-10 flex items-center justify-center pointer-events-none">
+                  <div
+                    className="px-6 py-3 rounded-lg text-white font-semibold text-sm shadow-2xl backdrop-blur-sm text-center"
+                    style={{ background: "rgba(0,122,255,0.75)", border: "1px solid rgba(255,255,255,0.25)" }}
+                  >
+                    Under Active Development — Coming Soon
                   </div>
                 </div>
+
               </div>
             </div>
           </FadeIn>
