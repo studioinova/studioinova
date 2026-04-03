@@ -199,7 +199,7 @@ export default function Products() {
                       className="w-12 h-12 rounded-xl object-cover shadow-sm"
                     />
                   </div>
-                  <h2 className="text-3xl font-bold">AI Manga Translator — Intelligent Manga Translation</h2>
+                  <h2 className="text-3xl font-bold">AI Manga Translator — Studio-Quality Scripting</h2>
                 </div>
 
                 <div
@@ -207,6 +207,9 @@ export default function Products() {
                   style={{ height: "180px", overflowY: "auto" }}
                 >
                   <div className="text-sm leading-relaxed space-y-4">
+                    <div>
+                      <span className="text-muted-foreground">Experience Manga like a cinematic masterpiece. Our AI transforms static dialogue into professional-grade scripts, preserving every nuance, honorific, and emotional beat.</span>
+                    </div>
                     <div>
                       <span className="font-bold" style={{ color: "#007AFF" }}>Dubbing-Grade Precision — </span>
                       <span className="text-muted-foreground">Our AI translates scripts with the same depth as a professional Dubbing Studio. It ensures that every line feels natural and fits the character's personality.</span>
@@ -230,7 +233,7 @@ export default function Products() {
                       "Studio-Quality Scripts: Natural-flowing dialogue for a smooth reading experience.",
                       "Character Tone Matching: Maintains consistent speaking styles for every character.",
                       "Era-Specific Adaptation: Handles historical and futuristic settings perfectly.",
-                      "Automatic UI Integration: No more clunky text; everything fits perfectly inside the speech bubbles.",
+                      "Cinematic Adaptation: Translates with the flow and impact of a high-budget Anime Dub.",
                     ].map((feature, i) => (
                       <li key={i} className="flex items-start text-sm text-foreground font-medium opacity-80">
                         <div className="mr-3 mt-0.5 w-5 h-5 flex-shrink-0 rounded-full flex items-center justify-center" style={{ background: "rgba(0,122,255,0.1)" }}>
@@ -245,53 +248,73 @@ export default function Products() {
 
               </div>
 
-              {/* Code Editor Mockup */}
-              <div className="lg:w-1/2 bg-slate-950 flex items-stretch relative overflow-hidden border-t lg:border-t-0 lg:border-r border-border min-h-[400px]">
+              {/* Dual-View Script Interface */}
+              <div className="lg:w-1/2 flex items-stretch relative overflow-hidden border-t lg:border-t-0 lg:border-r border-border min-h-[400px]" style={{ background: "#1c1f26" }}>
+                <div className="w-full flex flex-col">
 
-                {/* VS Code-style editor */}
-                <div className="w-full flex flex-col font-mono text-xs">
-                  {/* Title bar */}
-                  <div className="flex items-center gap-2 px-4 py-2.5 bg-[#1e1e1e] border-b border-slate-800">
-                    <div className="w-3 h-3 rounded-full bg-red-500/70"></div>
-                    <div className="w-3 h-3 rounded-full bg-yellow-500/70"></div>
-                    <div className="w-3 h-3 rounded-full bg-green-500/70"></div>
-                    <span className="ml-3 text-slate-400 text-[11px]">manga-status.json — AI Manga Translator</span>
+                  {/* Header bar */}
+                  <div className="flex items-center justify-between px-5 py-3 border-b" style={{ background: "#14161c", borderColor: "#2e3340" }}>
+                    <div className="flex items-center gap-2">
+                      <div className="w-2.5 h-2.5 rounded-full bg-red-500/70"></div>
+                      <div className="w-2.5 h-2.5 rounded-full bg-yellow-500/70"></div>
+                      <div className="w-2.5 h-2.5 rounded-full bg-green-500/70"></div>
+                    </div>
+                    <span className="text-xs font-semibold tracking-widest uppercase" style={{ color: "#007AFF", letterSpacing: "0.12em" }}>Studio-Grade Script Engine</span>
+                    <div className="w-16" />
                   </div>
 
-                  {/* Tab bar */}
-                  <div className="flex bg-[#252526] border-b border-slate-800">
-                    <div className="px-4 py-1.5 bg-[#1e1e1e] border-r border-slate-800 text-slate-300 text-[11px]">manga-status.json</div>
-                    <div className="px-4 py-1.5 text-slate-500 text-[11px]">translator-config.json</div>
-                  </div>
-
-                  {/* Code body */}
-                  <div className="flex-1 p-5 overflow-hidden leading-relaxed" style={{ background: "#1e1e1e" }}>
-                    {[
-                      { ln: "1",  code: <span className="text-slate-300">{"{"}</span> },
-                      { ln: "2",  code: <><span className="text-[#9cdcfe]">&nbsp;&nbsp;"MangaTitle"</span><span className="text-slate-300">: </span><span className="text-[#ce9178]">"Project Samurai"</span><span className="text-slate-300">,</span></> },
-                      { ln: "3",  code: <><span className="text-[#9cdcfe]">&nbsp;&nbsp;"CurrentStatus"</span><span className="text-slate-300">: </span><span className="text-[#ce9178]">"UNDER DEVELOPMENT"</span><span className="text-slate-300">,</span></> },
-                      { ln: "4",  code: <><span className="text-[#9cdcfe]">&nbsp;&nbsp;"Module"</span><span className="text-slate-300">: </span><span className="text-[#ce9178]">"EMOTION_ENGINE"</span><span className="text-slate-300">,</span></> },
-                      { ln: "5",  code: <><span className="text-[#9cdcfe]">&nbsp;&nbsp;"Task"</span><span className="text-slate-300">: </span><span className="text-[#ce9178]">"Integrating Automatic Bubble Detection"</span><span className="text-slate-300">,</span></> },
-                      { ln: "6",  code: <><span className="text-[#9cdcfe]">&nbsp;&nbsp;"ReleaseDate"</span><span className="text-slate-300">: </span><span className="text-[#ce9178]">"TBD"</span></> },
-                      { ln: "7",  code: <span className="text-slate-300">{"}"}</span> },
-                    ].map(({ ln, code }) => (
-                      <div key={ln} className="flex gap-4">
-                        <span className="select-none text-slate-600 w-4 text-right shrink-0">{ln}</span>
-                        <span className="text-slate-300">{code}</span>
-                      </div>
-                    ))}
-
-                    {/* Blinking cursor */}
-                    <div className="flex gap-4 mt-0.5">
-                      <span className="select-none text-slate-600 w-4 text-right shrink-0">8</span>
-                      <span className="inline-block w-2 h-3.5 bg-[#007AFF] animate-pulse" />
+                  {/* Column headers */}
+                  <div className="grid grid-cols-2 border-b" style={{ borderColor: "#2e3340" }}>
+                    <div className="px-5 py-2 text-[10px] font-bold uppercase tracking-widest border-r" style={{ color: "#007AFF", borderColor: "#2e3340", background: "#181b22" }}>
+                      Original · 日本語
+                    </div>
+                    <div className="px-5 py-2 text-[10px] font-bold uppercase tracking-widest" style={{ color: "#5ba3ff", background: "#181b22" }}>
+                      Translation · EN
                     </div>
                   </div>
 
+                  {/* Script rows */}
+                  <div className="flex-1 overflow-hidden divide-y" style={{ divideColor: "#2e3340" }}>
+                    {[
+                      {
+                        jp: { char: "侍一郎", line: "「お前は何者だ？この地に何をしに来た！」" },
+                        en: { char: "SAMURAI ICHIRO", emotion: "Fierce", line: "Who are you?! State your purpose in these lands!" },
+                      },
+                      {
+                        jp: { char: "謎の旅人", line: "「…答える義理はない。だが、邪魔をするなら話は別だ。」" },
+                        en: { char: "MYSTERIOUS TRAVELER", emotion: "Cold / Calm", line: "...I owe you no answer. But obstruct me, and that changes." },
+                      },
+                      {
+                        jp: { char: "侍一郎", line: "「面白い。では、その刀で証明してみろ！」" },
+                        en: { char: "SAMURAI ICHIRO", emotion: "Excited", line: "Interesting. Then prove it with that blade of yours!" },
+                      },
+                      {
+                        jp: { char: "ナレーター", line: "「運命の出会いは、静寂を切り裂く剣のごとく訪れた。」" },
+                        en: { char: "NARRATOR", emotion: "Epic", line: "Their fated meeting arrived like a blade cleaving silence." },
+                      },
+                    ].map((row, i) => (
+                      <div key={i} className="grid grid-cols-2 min-h-[70px]" style={{ borderColor: "#2e3340" }}>
+                        {/* Japanese side */}
+                        <div className="px-4 py-3 border-r flex flex-col justify-center gap-1" style={{ borderColor: "#2e3340" }}>
+                          <span className="text-[10px] font-bold" style={{ color: "#007AFF" }}>{row.jp.char}</span>
+                          <span className="text-[11px] leading-snug" style={{ color: "#c9d1e0", fontFamily: "serif" }}>{row.jp.line}</span>
+                        </div>
+                        {/* English side */}
+                        <div className="px-4 py-3 flex flex-col justify-center gap-1">
+                          <div className="flex items-center gap-2">
+                            <span className="text-[10px] font-bold tracking-wide" style={{ color: "#5ba3ff" }}>{row.en.char}</span>
+                            <span className="text-[9px] px-1.5 py-0.5 rounded" style={{ background: "rgba(0,122,255,0.15)", color: "#007AFF" }}>{row.en.emotion}</span>
+                          </div>
+                          <span className="text-[11px] leading-snug" style={{ color: "#c9d1e0" }}>{row.en.line}</span>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+
                   {/* Status bar */}
-                  <div className="flex items-center justify-between px-4 py-1 text-[10px] text-white" style={{ background: "#007AFF" }}>
-                    <span>JSON</span>
-                    <span>Ln 8, Col 1</span>
+                  <div className="flex items-center justify-between px-5 py-1.5 text-[10px]" style={{ background: "#007AFF", color: "#fff" }}>
+                    <span>Script Engine v1.0 · Era: Feudal Japan</span>
+                    <span>4 lines · Processing…</span>
                   </div>
                 </div>
 
@@ -299,12 +322,11 @@ export default function Products() {
                 <div className="absolute inset-0 z-10 flex items-center justify-center pointer-events-none">
                   <div
                     className="px-6 py-3 rounded-lg text-white font-semibold text-sm shadow-2xl backdrop-blur-sm text-center"
-                    style={{ background: "rgba(0,122,255,0.75)", border: "1px solid rgba(255,255,255,0.25)" }}
+                    style={{ background: "rgba(0,122,255,0.78)", border: "1px solid rgba(255,255,255,0.25)" }}
                   >
                     Under Active Development — Coming Soon
                   </div>
                 </div>
-
               </div>
             </div>
           </FadeIn>
