@@ -1,7 +1,7 @@
 import { useState, useRef } from "react";
 import { FadeIn } from "@/components/ui/FadeIn";
 import { Button } from "@/components/ui/button";
-import { ExternalLink, Check, ChevronLeft, ChevronRight, Sparkles } from "lucide-react";
+import { ExternalLink, Check, ChevronLeft, ChevronRight } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 
 const DETECT_AI_SLIDES = [
@@ -432,26 +432,8 @@ export default function Products() {
                       onMouseEnter={e => (e.currentTarget.style.transform = "perspective(700px) rotateY(0deg) rotateX(0deg)")}
                       onMouseLeave={e => (e.currentTarget.style.transform = "perspective(700px) rotateY(-8deg) rotateX(2deg)")}
                     >
-                      <div className="w-full rounded-xl overflow-hidden" style={{ aspectRatio: "2/3", background: "linear-gradient(160deg, #0a1628 0%, #0d2147 50%, #0a1628 100%)" }}>
-                        <div className="w-full h-full flex flex-col items-center justify-center gap-3 p-5 relative">
-                          <div className="absolute inset-0 opacity-20">
-                            {[...Array(14)].map((_, i) => (
-                              <div key={i} className="absolute w-0.5 h-0.5 rounded-full bg-white"
-                                style={{ top: `${8 + (i * 37) % 85}%`, left: `${5 + (i * 53) % 90}%` }} />
-                            ))}
-                          </div>
-                          <div className="w-12 h-12 rounded-2xl flex items-center justify-center" style={{ background: "rgba(0,122,255,0.2)", border: "1px solid rgba(0,122,255,0.4)" }}>
-                            <Sparkles className="w-6 h-6" style={{ color: "#007AFF" }} />
-                          </div>
-                          <div className="text-center">
-                            <p className="text-white font-bold text-[11px] leading-tight">The Art of</p>
-                            <p className="font-bold text-[13px] leading-tight" style={{ color: "#5ba3ff" }}>Prompt</p>
-                            <p className="font-bold text-[13px] leading-tight" style={{ color: "#5ba3ff" }}>Engineering</p>
-                          </div>
-                          <div className="mt-auto text-center">
-                            <p className="text-[9px]" style={{ color: "rgba(255,255,255,0.4)" }}>Studio Inova · 2026</p>
-                          </div>
-                        </div>
+                      <div className="w-full rounded-xl overflow-hidden flex items-center justify-center" style={{ aspectRatio: "2/3", background: "linear-gradient(160deg, #0a1628 0%, #0d2147 55%, #081020 100%)" }}>
+                        <span className="text-white font-bold text-xl tracking-wide select-none">Coming Soon</span>
                       </div>
                       <div className="absolute top-0 left-0 w-2 h-full rounded-l-xl" style={{ background: "linear-gradient(to right, rgba(255,255,255,0.12), transparent)" }} />
                     </div>
