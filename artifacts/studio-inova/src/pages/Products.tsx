@@ -1,7 +1,7 @@
 import { useState, useRef } from "react";
 import { FadeIn } from "@/components/ui/FadeIn";
 import { Button } from "@/components/ui/button";
-import { ExternalLink, Check, ChevronLeft, ChevronRight } from "lucide-react";
+import { ExternalLink, Check, ChevronLeft, ChevronRight, Sparkles } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 
 const DETECT_AI_SLIDES = [
@@ -339,88 +339,161 @@ export default function Products() {
             <h2 className="text-2xl md:text-3xl font-bold tracking-tight">Studio Inova E-books</h2>
           </FadeIn>
 
-          <FadeIn delay={0.1}>
-            <div className="inova-card overflow-hidden border border-border/40 relative">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-stretch">
 
-              {/* New Release badge — top-right corner */}
-              <div className="absolute top-5 right-5 z-10">
-                <span className="text-[11px] font-bold px-3 py-1 rounded-full shadow" style={{ background: "linear-gradient(135deg,#f5c842,#e6a800)", color: "#fff", letterSpacing: "0.04em" }}>
-                  New Release
-                </span>
-              </div>
+            {/* ── Card 1: Zero Knowledge to App Builder ── */}
+            <FadeIn delay={0.1}>
+              <div className="inova-card overflow-hidden border border-border/40 relative bg-white flex flex-col h-full">
 
-              <div className="flex flex-col md:flex-row items-center gap-8 md:gap-14 p-8 md:p-12">
-
-                {/* Book cover — 3D shadow mockup */}
-                <div className="shrink-0 flex items-center justify-center">
-                  <div
-                    className="relative w-44 md:w-52"
-                    style={{
-                      filter: "drop-shadow(-8px 12px 24px rgba(0,0,0,0.35)) drop-shadow(2px 2px 0px rgba(0,0,0,0.25))",
-                      transform: "perspective(600px) rotateY(8deg) rotateX(2deg)",
-                      transition: "transform 0.4s ease",
-                    }}
-                    onMouseEnter={e => (e.currentTarget.style.transform = "perspective(600px) rotateY(0deg) rotateX(0deg)")}
-                    onMouseLeave={e => (e.currentTarget.style.transform = "perspective(600px) rotateY(8deg) rotateX(2deg)")}
-                  >
-                    <img
-                      src="/ebook-cover.jpg"
-                      alt="Zero Knowledge to App Builder"
-                      className="w-full rounded-lg"
-                      style={{ display: "block" }}
-                    />
-                    {/* Spine highlight */}
-                    <div className="absolute top-0 left-0 w-2 h-full rounded-l-lg" style={{ background: "linear-gradient(to right, rgba(255,255,255,0.18), transparent)" }} />
-                  </div>
+                {/* Buy Now badge */}
+                <div className="absolute top-4 right-4 z-10">
+                  <span className="text-[11px] font-bold px-3 py-1 rounded-full shadow" style={{ background: "#007AFF", color: "#fff", letterSpacing: "0.04em" }}>
+                    Buy Now
+                  </span>
                 </div>
 
-                {/* Text content */}
-                <div className="flex-1 min-w-0">
-                  <div className="flex flex-wrap gap-2 mb-5">
-                    <Badge className="border-0" style={{ background: "rgba(0,122,255,0.1)", color: "#007AFF" }}>E-book</Badge>
-                    <Badge className="border-0" style={{ background: "rgba(0,122,255,0.07)", color: "#007AFF" }}>2026</Badge>
+                <div className="flex flex-col items-center p-8 gap-6 flex-1">
+
+                  {/* Book cover */}
+                  <div className="shrink-0 flex items-center justify-center pt-2">
+                    <div
+                      className="relative w-36"
+                      style={{
+                        filter: "drop-shadow(-6px 10px 20px rgba(0,0,0,0.3)) drop-shadow(2px 2px 0px rgba(0,0,0,0.2))",
+                        transform: "perspective(600px) rotateY(8deg) rotateX(2deg)",
+                        transition: "transform 0.4s ease",
+                      }}
+                      onMouseEnter={e => (e.currentTarget.style.transform = "perspective(600px) rotateY(0deg) rotateX(0deg)")}
+                      onMouseLeave={e => (e.currentTarget.style.transform = "perspective(600px) rotateY(8deg) rotateX(2deg)")}
+                    >
+                      <img src="/ebook-cover.jpg" alt="Zero Knowledge to App Builder" className="w-full rounded-lg" style={{ display: "block" }} />
+                      <div className="absolute top-0 left-0 w-2 h-full rounded-l-lg" style={{ background: "linear-gradient(to right, rgba(255,255,255,0.18), transparent)" }} />
+                    </div>
                   </div>
 
-                  <h3 className="text-2xl md:text-3xl font-bold mb-1">Zero Knowledge to App Builder</h3>
-                  <p className="text-base mb-5" style={{ color: "#007AFF" }}>How anyone can build apps using AI — without coding.</p>
+                  {/* Text */}
+                  <div className="w-full flex-1 flex flex-col">
+                    <div className="flex flex-wrap gap-2 mb-3">
+                      <Badge className="border-0" style={{ background: "rgba(0,122,255,0.1)", color: "#007AFF" }}>E-book</Badge>
+                      <Badge className="border-0" style={{ background: "rgba(0,122,255,0.07)", color: "#007AFF" }}>2026</Badge>
+                    </div>
 
-                  {/* Scrollable description */}
-                  <div
-                    className="detect-ai-scroll mb-6 pr-3 text-sm leading-relaxed space-y-4"
-                    style={{ height: "160px", overflowY: "auto" }}
-                  >
-                    <div>
-                      <span className="font-bold" style={{ color: "#007AFF" }}>The Goal — </span>
-                      <span className="text-muted-foreground">This book is designed to change your mindset. Learn how to turn ideas into real applications using the power of AI.</span>
+                    <h3 className="text-xl font-bold mb-1">Zero Knowledge to App Builder</h3>
+                    <p className="text-sm mb-4" style={{ color: "#007AFF" }}>How anyone can build apps using AI — without coding.</p>
+
+                    <div className="detect-ai-scroll mb-5 pr-2 text-sm leading-relaxed space-y-3 flex-1" style={{ height: "150px", overflowY: "auto" }}>
+                      <div>
+                        <span className="font-bold" style={{ color: "#007AFF" }}>The Goal — </span>
+                        <span className="text-muted-foreground">This book is designed to change your mindset. Learn how to turn ideas into real applications using the power of AI.</span>
+                      </div>
+                      <div>
+                        <span className="font-bold" style={{ color: "#007AFF" }}>What You Will Learn — </span>
+                      </div>
+                      <ul className="space-y-2 pl-1">
+                        {[
+                          "The Zero Knowledge Mindset.",
+                          "Essential AI tools for building without code.",
+                          "Planning your first app, screens, and flows.",
+                          "Fixing errors and moving from prototype to a real app.",
+                        ].map((item, i) => (
+                          <li key={i} className="flex items-start gap-2.5 text-muted-foreground">
+                            <div className="mt-0.5 w-4 h-4 flex-shrink-0 rounded-full flex items-center justify-center" style={{ background: "rgba(0,122,255,0.1)" }}>
+                              <Check className="w-2.5 h-2.5" style={{ color: "#007AFF" }} />
+                            </div>
+                            {item}
+                          </li>
+                        ))}
+                      </ul>
+                      <p className="text-muted-foreground text-xs pt-1">By Studio Inova · 2026</p>
                     </div>
-                    <div>
-                      <span className="font-bold" style={{ color: "#007AFF" }}>What You Will Learn — </span>
-                    </div>
-                    <ul className="space-y-2.5 pl-1">
-                      {[
-                        "The Zero Knowledge Mindset.",
-                        "Essential AI tools for building without code.",
-                        "Planning your first app, screens, and flows.",
-                        "Fixing errors and moving from prototype to a real app.",
-                      ].map((item, i) => (
-                        <li key={i} className="flex items-start gap-2.5 text-muted-foreground">
-                          <div className="mt-1 w-4 h-4 flex-shrink-0 rounded-full flex items-center justify-center" style={{ background: "rgba(0,122,255,0.1)" }}>
-                            <Check className="w-2.5 h-2.5" style={{ color: "#007AFF" }} />
+
+                    <Button className="rounded-full px-8 w-fit" style={{ background: "#007AFF", color: "#fff" }}>
+                      Get the E-book
+                    </Button>
+                  </div>
+                </div>
+              </div>
+            </FadeIn>
+
+            {/* ── Card 2: The Art of Prompt Engineering ── */}
+            <FadeIn delay={0.2}>
+              <div className="inova-card overflow-hidden border border-border/40 relative bg-white flex flex-col h-full">
+
+                {/* Coming Soon badge */}
+                <div className="absolute top-4 right-4 z-10">
+                  <span className="text-[11px] font-bold px-3 py-1 rounded-full shadow" style={{ background: "rgba(0,122,255,0.12)", color: "#007AFF", letterSpacing: "0.04em", border: "1px solid rgba(0,122,255,0.25)" }}>
+                    Coming Soon
+                  </span>
+                </div>
+
+                <div className="flex flex-col items-center p-8 gap-6 flex-1">
+
+                  {/* Placeholder book cover */}
+                  <div className="shrink-0 flex items-center justify-center pt-2">
+                    <div
+                      className="relative w-36"
+                      style={{
+                        filter: "drop-shadow(-6px 10px 20px rgba(0,0,0,0.35)) drop-shadow(2px 2px 0px rgba(0,0,0,0.2))",
+                        transform: "perspective(600px) rotateY(-8deg) rotateX(2deg)",
+                        transition: "transform 0.4s ease",
+                      }}
+                      onMouseEnter={e => (e.currentTarget.style.transform = "perspective(600px) rotateY(0deg) rotateX(0deg)")}
+                      onMouseLeave={e => (e.currentTarget.style.transform = "perspective(600px) rotateY(-8deg) rotateX(2deg)")}
+                    >
+                      {/* Placeholder cover — dark blue with AI spark */}
+                      <div className="w-full rounded-lg overflow-hidden" style={{ aspectRatio: "2/3", background: "linear-gradient(160deg, #0a1628 0%, #0d2147 50%, #0a1628 100%)" }}>
+                        <div className="w-full h-full flex flex-col items-center justify-center gap-4 p-5 relative">
+                          {/* Stars / sparks */}
+                          <div className="absolute inset-0 opacity-20">
+                            {[...Array(14)].map((_, i) => (
+                              <div key={i} className="absolute w-0.5 h-0.5 rounded-full bg-white"
+                                style={{ top: `${8 + (i * 37) % 85}%`, left: `${5 + (i * 53) % 90}%` }} />
+                            ))}
                           </div>
-                          {item}
-                        </li>
-                      ))}
-                    </ul>
-                    <p className="text-muted-foreground text-xs pt-1">By Studio Inova · 2026</p>
+                          <div className="w-14 h-14 rounded-2xl flex items-center justify-center" style={{ background: "rgba(0,122,255,0.2)", border: "1px solid rgba(0,122,255,0.4)" }}>
+                            <Sparkles className="w-7 h-7" style={{ color: "#007AFF" }} />
+                          </div>
+                          <div className="text-center">
+                            <p className="text-white font-bold text-[11px] leading-tight">The Art of</p>
+                            <p className="font-bold text-[13px] leading-tight" style={{ color: "#5ba3ff" }}>Prompt</p>
+                            <p className="font-bold text-[13px] leading-tight" style={{ color: "#5ba3ff" }}>Engineering</p>
+                          </div>
+                          <div className="mt-auto text-center">
+                            <p className="text-[9px]" style={{ color: "rgba(255,255,255,0.4)" }}>Studio Inova · 2026</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="absolute top-0 left-0 w-2 h-full rounded-l-lg" style={{ background: "linear-gradient(to right, rgba(255,255,255,0.12), transparent)" }} />
+                    </div>
                   </div>
 
-                  <Button className="rounded-full px-8" style={{ background: "#007AFF", color: "#fff" }}>
-                    Get the E-book
-                  </Button>
+                  {/* Text */}
+                  <div className="w-full flex-1 flex flex-col">
+                    <div className="flex flex-wrap gap-2 mb-3">
+                      <Badge className="border-0" style={{ background: "rgba(0,122,255,0.1)", color: "#007AFF" }}>E-book</Badge>
+                      <Badge className="border-0" style={{ background: "rgba(0,122,255,0.07)", color: "#007AFF" }}>2026</Badge>
+                    </div>
+
+                    <h3 className="text-xl font-bold mb-1">The Art of Prompt Engineering</h3>
+                    <p className="text-sm mb-4" style={{ color: "#007AFF" }}>Master the language of AI to get professional results.</p>
+
+                    <div className="detect-ai-scroll mb-5 pr-2 text-sm leading-relaxed flex-1" style={{ height: "150px", overflowY: "auto" }}>
+                      <span className="text-muted-foreground">Learn how to communicate with AI like a pro. This guide will teach you how to write perfect prompts for coding, designing, and business automation. Unlock the full potential of every AI tool you use — from writing to development to creative work.</span>
+                    </div>
+
+                    <Button
+                      className="rounded-full px-8 w-fit"
+                      style={{ background: "rgba(0,122,255,0.55)", color: "#fff", cursor: "not-allowed" }}
+                      disabled
+                    >
+                      Notify Me
+                    </Button>
+                  </div>
                 </div>
               </div>
-            </div>
-          </FadeIn>
+            </FadeIn>
+
+          </div>
         </div>
 
       </div>
