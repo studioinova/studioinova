@@ -38,9 +38,27 @@ export default function Products() {
                   <h2 className="text-3xl font-bold">Detect AI — Detect what's real or fake</h2>
                 </div>
 
-                <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
-                  The industry-leading tool to detect AI-generated content. Accurately identify AI-written text, AI-generated images, and videos with our deep scanning technology.
-                </p>
+                <div
+                  className="detect-ai-scroll mb-8 pr-2 text-sm leading-relaxed space-y-4"
+                  style={{ height: "180px", overflowY: "auto" }}
+                >
+                  <div>
+                    <span className="font-bold" style={{ color: "#007AFF" }}>What it is — </span>
+                    <span className="text-muted-foreground">Detect AI is a state-of-the-art security tool developed by Studio Inova to verify digital authenticity. It helps students, educators, journalists, and enterprises confirm whether content was created by a human or an AI.</span>
+                  </div>
+                  <div>
+                    <span className="font-bold" style={{ color: "#007AFF" }}>What it does — </span>
+                    <span className="text-muted-foreground">It scans across multiple formats. For <strong className="text-foreground">Text</strong>, it identifies patterns common in LLMs like GPT-4. For <strong className="text-foreground">Images &amp; Videos</strong>, it looks for pixel inconsistencies and deepfake signatures that the human eye cannot detect.</span>
+                  </div>
+                  <div>
+                    <span className="font-bold" style={{ color: "#007AFF" }}>How it works — </span>
+                    <span className="text-muted-foreground">Using advanced neural networks, our engine analyzes linguistic variance and metadata. It doesn't just guess — it calculates the probability of AI involvement through billions of data points, returning a precise confidence score.</span>
+                  </div>
+                  <div>
+                    <span className="font-bold" style={{ color: "#007AFF" }}>The Process — </span>
+                    <span className="text-muted-foreground">Simply paste your content or upload a file. Our Deep Scan engine runs a 3-layer check: <strong className="text-foreground">Linguistic Analysis</strong>, <strong className="text-foreground">Metadata Verification</strong>, and <strong className="text-foreground">Pattern Recognition</strong> — all in seconds.</span>
+                  </div>
+                </div>
 
                 <ul className="space-y-3 mb-8">
                   {[
