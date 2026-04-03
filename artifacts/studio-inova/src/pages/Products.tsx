@@ -208,24 +208,29 @@ export default function Products() {
                 >
                   <div className="text-sm leading-relaxed space-y-4">
                     <div>
-                      <span className="font-bold" style={{ color: "#007AFF" }}>The Concept — </span>
-                      <span className="text-muted-foreground">A revolutionary tool for Manga, Manhua, and E-book lovers. We don't just translate words; we translate the soul of the story.</span>
+                      <span className="font-bold" style={{ color: "#007AFF" }}>Dubbing-Grade Precision — </span>
+                      <span className="text-muted-foreground">Our AI translates scripts with the same depth as a professional Dubbing Studio. It ensures that every line feels natural and fits the character's personality.</span>
                     </div>
                     <div>
-                      <span className="font-bold" style={{ color: "#007AFF" }}>Emotion Engine — </span>
-                      <span className="text-muted-foreground">Our AI detects the context and emotion behind every dialogue to ensure the translation feels natural and keeps the original impact.</span>
+                      <span className="font-bold" style={{ color: "#007AFF" }}>Beyond Literal Translation — </span>
+                      <span className="text-muted-foreground">We don't just swap words. Our engine analyzes the Context & Vibe of the scene, just like how professional scriptwriters adapt Japanese anime for global audiences.</span>
                     </div>
                     <div>
-                      <span className="font-bold" style={{ color: "#007AFF" }}>Era-Specific Translation — </span>
-                      <span className="text-muted-foreground">Whether it's a historical Samurai manga or a futuristic Sci-fi, the language style adapts to the era and genre for an authentic reading experience.</span>
+                      <span className="font-bold" style={{ color: "#007AFF" }}>Nuance Preservation — </span>
+                      <span className="text-muted-foreground">Whether it's a polite honorific or rough slang, we maintain the original flavor of the language without losing its cultural essence.</span>
+                    </div>
+                    <div>
+                      <span className="font-bold" style={{ color: "#007AFF" }}>Emotion & Era Engine — </span>
+                      <span className="text-muted-foreground">Our core technology handles era-specific dialects and deep emotional tones, ensuring a 100% immersive reading experience.</span>
                     </div>
                   </div>
 
                   <ul className="space-y-3 pt-1">
                     {[
-                      "Automatic Speech Bubble Detection: No need to select text; our AI finds and replaces text within bubbles.",
-                      "Timeline Translation: Keeps track of names and terms for consistency across chapters.",
-                      "Age-Verified Filtering: Ensures a safe reading experience for all ages.",
+                      "Studio-Quality Scripts: Natural-flowing dialogue for a smooth reading experience.",
+                      "Character Tone Matching: Maintains consistent speaking styles for every character.",
+                      "Era-Specific Adaptation: Handles historical and futuristic settings perfectly.",
+                      "Automatic UI Integration: No more clunky text; everything fits perfectly inside the speech bubbles.",
                     ].map((feature, i) => (
                       <li key={i} className="flex items-start text-sm text-foreground font-medium opacity-80">
                         <div className="mr-3 mt-0.5 w-5 h-5 flex-shrink-0 rounded-full flex items-center justify-center" style={{ background: "rgba(0,122,255,0.1)" }}>
