@@ -29,7 +29,7 @@ export default function Contact() {
   const { toast } = useToast();
   const [isSending, setIsSending] = useState(false);
 
-  const form = useForm({
+  const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
       name: "",
@@ -40,9 +40,9 @@ export default function Contact() {
     },
   });
 
-  // এই ফাংশনটি মেসেজ পাঠাবে
+  // এই ফাংশনটি মেসেজ পাঠাবে এবং আসল এরর ধরবে
   async function onSubmit(values: z.infer<typeof formSchema>) {
-    // ৩. স্প্যাম প্রোটেকশন
+    // স্প্যাম প্রোটেকশন চেক
     if (values.botcheck) return; 
 
     setIsSending(true);
@@ -54,41 +54,45 @@ export default function Contact() {
           Accept: "application/json",
         },
         body: JSON.stringify({
-          access_key: "f878a3c2-b6e5-483b-9573-37e18c5df86c", // তোমার Key সরাসরি বসিয়ে দিলাম
+          access_key: "ce00ed30-20ca-4c28-901d-c878d2ca8d34", // তোমার নতুন Key বসানো হয়েছে
           name: values.name,
           email: values.email,
           subject: values.subject,
           message: values.message,
-          from_name: "Studio Inova Website"
+          from_name: "Studio Inova Contact Form"
         }),
       });
 
-      // ৪. রেসপন্স স্ট্যাটাস চেক
-      if (!response.ok) throw new Error("Server error");
-
       const result = await response.json();
-      if (result.success) {
+
+      if (response.ok && result.success) {
         toast({
           title: "Success!",
-          description: "Message sent to studioinova.official@gmail.com",
+          description: "Message sent! Check your studioinova.official@gmail.com inbox.",
         });
         form.reset();
-        } else {
-          throw new Error(result.message);
-        }
-        } catch (error) {
+      } else {
         toast({
           variant: "destructive",
-          title: "Error",
-          description: "Something went wrong. Please try again.",
+          title: "Web3Forms Error",
+          description: result.message || "Submission failed from server.",
         });
-        } finally {
-        setIsSending(false);
+        console.error("API Error Response:", result);
+      }
+    } catch (error: any) {
+      toast({
+        variant: "destructive",
+        title: "Connection Blocked!",
+        description: "Adblocker বা Network issue. কনসোল চেক করো।",
+      });
+      console.error("Network Error:", error);
+    } finally {
+      setIsSending(false);
     }
   }
 
   return (
-    <div className="pt-24 min-h-screen bg-background">
+    <div className="pt-24 min-h-screen bg-background animate-in fade-in duration-700">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="text-center mb-16">
           <h1 className="text-4xl md:text-5xl font-extrabold text-foreground mb-4">Get in Touch</h1>
@@ -96,6 +100,7 @@ export default function Contact() {
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+          {/* Contact Details Card */}
           <div className="p-8 border border-border/40 rounded-3xl bg-card shadow-sm text-left">
             <h2 className="text-2xl font-bold mb-8 text-foreground border-b pb-4">Contact Details</h2>
             <div className="space-y-10">
@@ -111,20 +116,26 @@ export default function Contact() {
             </div>
           </div>
 
+          {/* Contact Form */}
           <div className="p-8 border border-border/40 rounded-3xl bg-card shadow-sm">
             <Form {...form}>
               <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-5 text-left">
 
-                {/* ৩. Hidden Field for Bot Protection */}
-                <input type="checkbox" className="hidden" style={{display:'none'}} {...form.register("botcheck")} />
+                {/* Hidden Spam Protection Field */}
+                <input 
+                  type="checkbox" 
+                  className="hidden" 
+                  style={{display:'none'}} 
+                  {...form.register("botcheck")} 
+                />
 
                 <FormField
                   control={form.control}
                   name="name"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel className="font-bold">Full Name</FormLabel>
-                      <FormControl><Input placeholder="Sazid" {...field} /></FormControl>
+                      <FormLabel className="font-bold text-foreground">Full Name</FormLabel>
+                      <FormControl><Input placeholder="Your Name" {...field} /></FormControl>
                       <FormMessage />
                     </FormItem>
                   )}
@@ -135,8 +146,7 @@ export default function Contact() {
                   name="email"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel className="font-bold">Email</FormLabel>
-                      {/* ২. Email Type Fix */}
+                      <FormLabel className="font-bold text-foreground">Email</FormLabel>
                       <FormControl><Input type="email" placeholder="your@email.com" {...field} /></FormControl>
                       <FormMessage />
                     </FormItem>
@@ -148,8 +158,8 @@ export default function Contact() {
                   name="subject"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel className="font-bold">Subject</FormLabel>
-                      <FormControl><Input placeholder="Inquiry" {...field} /></FormControl>
+                      <FormLabel className="font-bold text-foreground">Subject</FormLabel>
+                      <FormControl><Input placeholder="How can we help?" {...field} /></FormControl>
                       <FormMessage />
                     </FormItem>
                   )}
@@ -160,24 +170,29 @@ export default function Contact() {
                   name="message"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel className="font-bold">Message</FormLabel>
+                      <FormLabel className="font-bold text-foreground">Message</FormLabel>
                       <FormControl>
-                        <Textarea placeholder="How can we help?" className="min-h-[140px] resize-none" {...field} />
+                        <Textarea placeholder="Describe your project..." className="min-h-[140px] resize-none" {...field} />
                       </FormControl>
                       <FormMessage />
                     </FormItem>
                   )}
                 />
 
+                {/* UX Improvement: Loading State Button */}
                 <Button 
                   type="submit" 
                   disabled={isSending}
-                  className="w-full h-14 bg-primary text-white font-bold rounded-xl flex gap-3 items-center justify-center text-lg transition-all"
+                  className="w-full h-14 bg-primary text-white font-bold rounded-xl flex gap-3 items-center justify-center text-lg transition-all active:scale-[0.98]"
                 >
                   {isSending ? (
-                    <><Loader2 className="animate-spin" /> Sending...</>
+                    <>
+                      <Loader2 className="animate-spin" /> Sending...
+                    </>
                   ) : (
-                    <><Send size={20} /> Send Message</>
+                    <>
+                      Send Message <Send size={20} />
+                    </>
                   )}
                 </Button>
               </form>
