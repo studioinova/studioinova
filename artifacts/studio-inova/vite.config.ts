@@ -1,25 +1,16 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
-import tailwindcss from "@tailwindcss/vite";
 import path from "path";
 
 export default defineConfig({
-  // base: './' দিলে ফাইলগুলো খুঁজে পেতে সুবিধা হবে
   base: './',
-  plugins: [
-    react(),
-    tailwindcss(),
-  ],
+  plugins: [react()],
   resolve: {
     alias: {
       "@": path.resolve(import.meta.dirname, "src"),
-      "@assets": path.resolve(import.meta.dirname, "..", "..", "attached_assets"),
     },
-    dedupe: ["react", "react-dom"],
   },
-  root: path.resolve(import.meta.dirname),
   build: {
-    // আউটপুট ফোল্ডার সহজ করে দিচ্ছি যাতে নেটলিফাই খুঁজে পায়
     outDir: "dist",
     emptyOutDir: true,
   },
